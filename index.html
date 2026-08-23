@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>MN Renaissance Festival - Interactive Map (Sprint 10)</title>
+  <title>MN Renaissance Festival - Interactive Map (Sprint 11)</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body, html { width: 100%; height: 100%; overflow: hidden; background: #1a120c; font-family: Georgia, serif; }
@@ -33,16 +33,7 @@
       border-radius: 4px;
     }
 
-    /* SVG Overlay Canvas for Walking Paths */
-    #path-overlay {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      pointer-events: none;
-      z-index: 4;
-    }
-
-    /* Collapsible Control Panel Overlay */
+    /* Collapsible Top-Left Control Panel */
     .panel-wrapper {
       position: absolute;
       top: 16px; left: 16px;
@@ -92,7 +83,6 @@
       padding-bottom: 2px;
     }
 
-    /* Search Box Input */
     .search-box {
       width: 100%;
       background: #1a120c;
@@ -205,8 +195,24 @@
     }
     .pin.draggable { cursor: move; }
     .pin.selected { z-index: 15; }
-    .pin:hover, .pin.selected {
-      transform: translate(-50%, -108%) scale(1.15);
+
+    /* Animated Jiggle/Pulse Keyframes for Targeted Search Items */
+    @keyframes pinJiggle {
+      0% { transform: translate(-50%, -100%) scale(1.1) rotate(0deg); }
+      20% { transform: translate(-50%, -115%) scale(1.25) rotate(-6deg); }
+      40% { transform: translate(-50%, -115%) scale(1.25) rotate(6deg); }
+      60% { transform: translate(-50%, -115%) scale(1.25) rotate(-4deg); }
+      80% { transform: translate(-50%, -115%) scale(1.25) rotate(4deg); }
+      100% { transform: translate(-50%, -100%) scale(1.1) rotate(0deg); }
+    }
+
+    .pin.jiggle {
+      animation: pinJiggle 0.8s infinite ease-in-out;
+      z-index: 30 !important;
+    }
+    .pin.jiggle .pin-badge {
+      border-color: #fbbf24 !important;
+      box-shadow: 0 0 20px #fbbf24 !important;
     }
 
     .pin-badge {
@@ -261,7 +267,6 @@
     }
     .drawer.open { right: 0; }
 
-    /* Mobile Responsive Breakpoint */
     @media (max-width: 600px) {
       .panel-wrapper { top: 10px; left: 10px; }
       .panel-wrapper.collapsed { transform: translateX(-310px); }
@@ -368,7 +373,6 @@
   <div id="map-container">
     <div id="map-wrapper">
       <img id="map-image" src="./mnrf-map.png" alt="MN Renaissance Festival Map">
-      <svg id="path-overlay"></svg>
       <div id="pins-layer"></div>
     </div>
   </div>
@@ -398,7 +402,6 @@
     const wrapper = document.getElementById('map-wrapper');
     const img = document.getElementById('map-image');
     const pinsLayer = document.getElementById('pins-layer');
-    const pathOverlay = document.getElementById('path-overlay');
     const drawer = document.getElementById('vendor-drawer');
 
     let scale = 1;
@@ -411,9 +414,6 @@
     let searchQuery = '';
     let selectedPinPoi = null;
     let isPanelCollapsed = false;
-
-    // King's Gate Entrance Coordinates (Grounds Reference Point)
-    const ENTRANCE_POINT = { x: 1020, y: 1080 };
 
     const MIN_SCALE = 0.3, MAX_SCALE = 2.5; 
 
@@ -474,12 +474,11 @@
 
     function renderPins() {
       pinsLayer.innerHTML = '';
-      let matchingPois = [];
 
       poiData.forEach(poi => {
         const isStarred = wishlistedIds.has(poi.id);
         
-        // Search Filter
+        // Search Matching
         let matchesSearch = true;
         if (searchQuery !== '') {
           const nameMatch = poi.name.toLowerCase().includes(searchQuery);
@@ -494,11 +493,11 @@
         }
         if (activeAreaFilter !== 'all' && poi.categoryLabel !== activeAreaFilter) return;
 
-        matchingPois.push(poi);
-
         const pin = document.createElement('div');
         const isSelected = selectedPinPoi && selectedPinPoi.id === poi.id;
-        pin.className = `pin pin-${poi.type} ${isStarred ? 'pin-bookmarked' : ''} ${isEditMode ? 'draggable' : ''} ${isSelected ? 'selected' : ''}`;
+        const isJiggling = searchQuery !== '' && matchesSearch;
+
+        pin.className = `pin pin-${poi.type} ${isStarred ? 'pin-bookmarked' : ''} ${isEditMode ? 'draggable' : ''} ${isSelected ? 'selected' : ''} ${isJiggling ? 'jiggle' : ''}`;
         pin.style.left = poi.x + 'px';
         pin.style.top = poi.y + 'px';
         
@@ -516,32 +515,11 @@
         }
         pinsLayer.appendChild(pin);
       });
-
-      // Draw Path if searching
-      if (searchQuery !== '' && matchingPois.length === 1) {
-        drawGuidePath(matchingPois[0]);
-      } else {
-        clearGuidePath();
-      }
-    }
-
-    function drawGuidePath(targetPoi) {
-      pathOverlay.setAttribute('width', img.naturalWidth || 2000);
-      pathOverlay.setAttribute('height', img.naturalHeight || 1500);
-      pathOverlay.innerHTML = `
-        <line x1="${ENTRANCE_POINT.x}" y1="${ENTRANCE_POINT.y}" x2="${targetPoi.x}" y2="${targetPoi.y}" 
-              stroke="#fbbf24" stroke-width="6" stroke-dasharray="10,8" stroke-linecap="round" />
-      `;
-    }
-
-    function clearGuidePath() {
-      pathOverlay.innerHTML = '';
     }
 
     function selectPin(poi) {
       selectedPinPoi = poi;
       document.getElementById('coord-readout').innerText = `${poi.name}: X=${poi.x}, Y=${poi.y}`;
-      drawGuidePath(poi);
       renderPins();
     }
 
@@ -554,7 +532,6 @@
         poi.x = Math.round((moveEvent.clientX - rect.left) / scale);
         poi.y = Math.round((moveEvent.clientY - rect.top) / scale);
         document.getElementById('coord-readout').innerText = `${poi.name}: X=${poi.x}, Y=${poi.y}`;
-        drawGuidePath(poi);
         renderPins();
       };
 
@@ -582,7 +559,6 @@
         e.preventDefault();
         document.getElementById('coord-readout').innerText = `${selectedPinPoi.name}: X=${selectedPinPoi.x}, Y=${selectedPinPoi.y}`;
         localStorage.setItem('mnrf_calibrated_db', JSON.stringify(poiData));
-        drawGuidePath(selectedPinPoi);
         renderPins();
       }
     });
@@ -676,9 +652,10 @@
     if (img.complete) { resetView(); loadMasterDatabase(); }
     window.onresize = resetView;
 
-    // Mobile Pinch-to-Zoom & Pan Gesture Logic
+    // Mobile Focal Pinch-to-Zoom Engine
     let touchStartDist = 0;
     let initialScale = 1;
+    let pinchCenter = { x: 0, y: 0 };
 
     container.addEventListener('touchstart', (e) => {
       if (e.target.closest('.panel-wrapper') || e.target.closest('.controls') || e.target.closest('.drawer') || isEditMode) return;
@@ -693,6 +670,10 @@
           e.touches[0].clientY - e.touches[1].clientY
         );
         initialScale = scale;
+        pinchCenter = {
+          x: (e.touches[0].clientX + e.touches[1].clientX) / 2,
+          y: (e.touches[0].clientY + e.touches[1].clientY) / 2
+        };
       }
     }, { passive: false });
 
@@ -709,7 +690,16 @@
           e.touches[0].clientY - e.touches[1].clientY
         );
         let targetScale = initialScale * (currentDist / touchStartDist);
-        scale = Math.min(Math.max(MIN_SCALE, targetScale), MAX_SCALE);
+        targetScale = Math.min(Math.max(MIN_SCALE, targetScale), MAX_SCALE);
+
+        // Focal point zoom calculation around pinch midpoint
+        const xs = (pinchCenter.x - pointX) / scale;
+        const ys = (pinchCenter.y - pointY) / scale;
+
+        scale = targetScale;
+        pointX = pinchCenter.x - xs * scale;
+        pointY = pinchCenter.y - ys * scale;
+
         setTransform();
       }
     }, { passive: false });
