@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>MN Renaissance Festival - Interactive Map (Sprint 11)</title>
+  <title>MN Renaissance Festival - Interactive Map (Sprint 12)</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body, html { width: 100%; height: 100%; overflow: hidden; background: #1a120c; font-family: Georgia, serif; }
@@ -58,6 +58,7 @@
       display: flex;
       flex-direction: column;
       gap: 8px;
+      position: relative;
     }
 
     .panel-toggle-btn {
@@ -83,17 +84,47 @@
       padding-bottom: 2px;
     }
 
+    /* Advanced Search & Auto-Complete Container */
+    .search-container { position: relative; width: 100%; }
     .search-box {
       width: 100%;
       background: #1a120c;
       color: #f3e5ab;
       border: 1px solid #8c6d3f;
-      padding: 6px 10px;
+      padding: 7px 10px;
       border-radius: 4px;
       font-family: Georgia, serif;
       font-size: 12px;
     }
     .search-box:focus { outline: 1px solid #d4b581; }
+
+    .search-results-dropdown {
+      position: absolute;
+      top: 100%; left: 0; right: 0;
+      background: #2c1e14;
+      border: 1px solid #8c6d3f;
+      border-radius: 0 0 6px 6px;
+      max-height: 200px;
+      overflow-y: auto;
+      z-index: 50;
+      display: none;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.8);
+    }
+    .search-results-dropdown.active { display: block; }
+
+    .search-result-item {
+      padding: 8px 10px;
+      border-bottom: 1px dashed #5c3c16;
+      font-size: 11px;
+      cursor: pointer;
+      color: #fef3d6;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .search-result-item:hover { background: #4a3319; }
+    .search-result-item .item-match { color: #fbbf24; font-weight: bold; }
+    .search-result-item .vendor-location { font-size: 9px; color: #a88b5e; }
 
     .filter-grid {
       display: grid;
@@ -330,8 +361,11 @@
   <!-- Collapsible Top-Left Control Panel -->
   <div class="panel-wrapper" id="panel-wrapper">
     <div class="panel">
-      <div class="panel-title">Item / Menu Search</div>
-      <input type="text" id="search-input" class="search-box" placeholder="Search menu, item, or act..." oninput="handleSearch(this.value)">
+      <div class="panel-title">Partial Food & Menu Search</div>
+      <div class="search-container">
+        <input type="text" id="search-input" class="search-box" placeholder="Try 'spinach', 'cider', 'gf', or 'sword'..." oninput="handleSearch(this.value)" autocomplete="off">
+        <div id="search-dropdown" class="search-results-dropdown"></div>
+      </div>
 
       <div class="panel-title">Category Filter</div>
       <div class="filter-grid">
@@ -450,9 +484,91 @@
       }
     }
 
+    // Token-Based Partial Search Engine
     function handleSearch(val) {
       searchQuery = val.toLowerCase().trim();
+      const dropdown = document.getElementById('search-dropdown');
+
+      if (searchQuery.length < 2) {
+        dropdown.classList.remove('active');
+        dropdown.innerHTML = '';
+        renderPins();
+        return;
+      }
+
+      const tokens = searchQuery.split(/\s+/);
+      let matchResults = [];
+
+      poiData.forEach(poi => {
+        let matchedItems = [];
+
+        // Check venue name
+        const vendorNameLower = poi.name.toLowerCase();
+        const vendorMatches = tokens.every(t => vendorNameLower.includes(t));
+
+        // Check individual menu items / acts
+        (poi.items || []).forEach(item => {
+          const itemNameLower = item.name.toLowerCase();
+          const itemTagsStr = (item.tags || []).join(' ').toLowerCase();
+
+          // Check token matches in item name or dietary flags (gf, veg, vegan)
+          const matchesItem = tokens.every(t => {
+            if (t === 'gf' && item.tags.includes('●')) return true;
+            if (t === 'veg' && item.tags.includes('■')) return true;
+            if (t === 'vegan' && item.tags.includes('▲')) return true;
+            return itemNameLower.includes(t);
+          });
+
+          if (matchesItem) {
+            matchedItems.push(item.name);
+          }
+        });
+
+        if (vendorMatches || matchedItems.length > 0) {
+          matchResults.push({
+            poi: poi,
+            matchedItems: matchedItems
+          });
+        }
+      });
+
+      // Render Dropdown Suggestions
+      if (matchResults.length > 0) {
+        let html = '';
+        matchResults.slice(0, 8).forEach(res => {
+          const itemLabel = res.matchedItems.length > 0 ? res.matchedItems.slice(0, 2).join(', ') : res.poi.name;
+          html += `
+            <div class="search-result-item" onclick="focusSearchResult('${res.poi.id}')">
+              <span class="item-match">🎯 ${itemLabel}</span>
+              <span class="vendor-location">📍 ${res.poi.name} (${res.poi.categoryLabel})</span>
+            </div>
+          `;
+        });
+        dropdown.innerHTML = html;
+        dropdown.classList.add('active');
+      } else {
+        dropdown.classList.remove('active');
+        dropdown.innerHTML = '';
+      }
+
       renderPins();
+    }
+
+    function focusSearchResult(poiId) {
+      const poi = poiData.find(p => p.id === poiId);
+      if (!poi) return;
+
+      document.getElementById('search-dropdown').classList.remove('active');
+      selectPin(poi);
+      openDrawer(poi);
+
+      // Auto-Pan and Zoom directly to target pin
+      const containerWidth = container.clientWidth;
+      const containerHeight = container.clientHeight;
+      scale = 1.6;
+      pointX = (containerWidth / 2) - (poi.x * scale);
+      pointY = (containerHeight / 2) - (poi.y * scale);
+      setTransform();
     }
 
     function filterCategory(cat) {
@@ -474,16 +590,28 @@
 
     function renderPins() {
       pinsLayer.innerHTML = '';
+      const tokens = searchQuery !== '' ? searchQuery.split(/\s+/) : [];
 
       poiData.forEach(poi => {
         const isStarred = wishlistedIds.has(poi.id);
         
-        // Search Matching
+        // Search Token Evaluation
         let matchesSearch = true;
-        if (searchQuery !== '') {
-          const nameMatch = poi.name.toLowerCase().includes(searchQuery);
-          const itemMatch = (poi.items || []).some(i => i.name.toLowerCase().includes(searchQuery));
-          matchesSearch = nameMatch || itemMatch;
+        if (tokens.length > 0) {
+          const vendorNameLower = poi.name.toLowerCase();
+          const vendorMatches = tokens.every(t => vendorNameLower.includes(t));
+
+          const itemMatches = (poi.items || []).some(item => {
+            const itemNameLower = item.name.toLowerCase();
+            return tokens.every(t => {
+              if (t === 'gf' && item.tags.includes('●')) return true;
+              if (t === 'veg' && item.tags.includes('■')) return true;
+              if (t === 'vegan' && item.tags.includes('▲')) return true;
+              return itemNameLower.includes(t);
+            });
+          });
+
+          matchesSearch = vendorMatches || itemMatches;
         }
 
         if (!matchesSearch) return;
@@ -495,7 +623,7 @@
 
         const pin = document.createElement('div');
         const isSelected = selectedPinPoi && selectedPinPoi.id === poi.id;
-        const isJiggling = searchQuery !== '' && matchesSearch;
+        const isJiggling = tokens.length > 0 && matchesSearch;
 
         pin.className = `pin pin-${poi.type} ${isStarred ? 'pin-bookmarked' : ''} ${isEditMode ? 'draggable' : ''} ${isSelected ? 'selected' : ''} ${isJiggling ? 'jiggle' : ''}`;
         pin.style.left = poi.x + 'px';
@@ -692,7 +820,6 @@
         let targetScale = initialScale * (currentDist / touchStartDist);
         targetScale = Math.min(Math.max(MIN_SCALE, targetScale), MAX_SCALE);
 
-        // Focal point zoom calculation around pinch midpoint
         const xs = (pinchCenter.x - pointX) / scale;
         const ys = (pinchCenter.y - pointY) / scale;
 
