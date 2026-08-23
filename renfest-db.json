@@ -1,0 +1,779 @@
+[
+  {
+    "id": "stage-legends",
+    "type": "stage",
+    "categoryLabel": "Area 6 - Upson Downs",
+    "icon": "🎭",
+    "name": "Legends Stage",
+    "x": 939,
+    "y": 1146,
+    "items": [
+      {
+        "name": "Puke & Snot - 10:30 am",
+        "tags": []
+      },
+      {
+        "name": "Puke & Snot - 12:00 pm",
+        "tags": []
+      },
+      {
+        "name": "Puke & Snot - 1:30 pm",
+        "tags": []
+      },
+      {
+        "name": "Puke & Snot - 3:30 pm",
+        "tags": []
+      },
+      {
+        "name": "Puke & Snot - 5:00 pm",
+        "tags": []
+      }
+    ],
+    "userNotes": [],
+    "userRating": null,
+    "photos": []
+  },
+  {
+    "id": "stage-bakery",
+    "type": "stage",
+    "categoryLabel": "Area 2 - Oven Hill Market",
+    "icon": "🎭",
+    "name": "Bakery Stage",
+    "x": 785,
+    "y": 861,
+    "items": [
+      {
+        "name": "The Danger Committee - Classic Blunders - 10:00 am",
+        "tags": []
+      },
+      {
+        "name": "The Danger Committee - Playing with Fire - 11:00 am",
+        "tags": []
+      },
+      {
+        "name": "The Danger Committee - Ninja: Silent but Deadly - 12:00 pm",
+        "tags": []
+      },
+      {
+        "name": "The Danger Committee - Playing with Fire - 2:30 pm",
+        "tags": []
+      },
+      {
+        "name": "The Danger Committee - Flaming Death - 4:30 pm",
+        "tags": []
+      },
+      {
+        "name": "The Danger Committee - Mostly Harmless - 5:30 pm",
+        "tags": []
+      }
+    ],
+    "userNotes": [],
+    "userRating": null,
+    "photos": []
+  },
+  {
+    "id": "stage-joust",
+    "type": "stage",
+    "categoryLabel": "Area 1 - Shepherd's Green",
+    "icon": "🏇",
+    "name": "Joust Track & Arena",
+    "x": 1203,
+    "y": 857,
+    "items": [
+      {
+        "name": "Joust Quintain Game Show - 11:00 am",
+        "tags": []
+      },
+      {
+        "name": "Grand Parade - 12:30 pm",
+        "tags": []
+      },
+      {
+        "name": "Joust - Full Armour - 1:00 pm",
+        "tags": []
+      },
+      {
+        "name": "Joust - Full Armour - 3:00 pm",
+        "tags": []
+      },
+      {
+        "name": "Joust Quintain Game Show - 5:00 pm",
+        "tags": []
+      }
+    ],
+    "userNotes": [],
+    "userRating": null,
+    "photos": []
+  },
+  {
+    "id": "stage-folkstone",
+    "type": "stage",
+    "categoryLabel": "Area 5 - Folkstone Well",
+    "icon": "🎪",
+    "name": "Folkstone Well / Cirque Du Celeste Stage",
+    "x": 1563,
+    "y": 723,
+    "items": [
+      {
+        "name": "Shimmy & Spice - 10:00 am",
+        "tags": []
+      },
+      {
+        "name": "Fandazzi Fire Circus - 10:30 am",
+        "tags": []
+      },
+      {
+        "name": "Kazimir the Hungry Sword Swallower - 11:00 am",
+        "tags": []
+      },
+      {
+        "name": "Fandazzi Fire Circus - 11:30 am",
+        "tags": []
+      },
+      {
+        "name": "Dueling Masters - 12:00 pm",
+        "tags": []
+      },
+      {
+        "name": "Kazimir the Hungry - 12:30 pm",
+        "tags": []
+      },
+      {
+        "name": "The Littlest Dragon - 1:00 pm",
+        "tags": []
+      },
+      {
+        "name": "Fandazzi Fire Circus - 2:00 pm",
+        "tags": []
+      },
+      {
+        "name": "Dueling Masters - 2:30 pm",
+        "tags": []
+      },
+      {
+        "name": "Fandazzi Fire Circus - 3:00 pm",
+        "tags": []
+      },
+      {
+        "name": "Shimmy & Spice - 3:30 pm",
+        "tags": []
+      },
+      {
+        "name": "Kazimir the Hungry - 4:00 pm",
+        "tags": []
+      },
+      {
+        "name": "Fandazzi Fire Circus Uber Fire Show - 4:45 pm",
+        "tags": []
+      }
+    ],
+    "userNotes": [],
+    "userRating": null,
+    "photos": []
+  },
+  {
+    "id": "stage-treetop",
+    "type": "stage",
+    "categoryLabel": "Area 3 - Treetop Round",
+    "icon": "🤹",
+    "name": "Treetop Stage",
+    "x": 865,
+    "y": 498,
+    "items": [
+      {
+        "name": "Oops! The Danger Freak - 10:15 am",
+        "tags": []
+      },
+      {
+        "name": "Brother Paul Magician - 11:00 am",
+        "tags": []
+      },
+      {
+        "name": "Zilch the Torysteller - 11:30 am",
+        "tags": []
+      },
+      {
+        "name": "Oops! The Danger Freak - 12:30 pm",
+        "tags": []
+      },
+      {
+        "name": "Zilch the Torysteller - 1:15 pm",
+        "tags": []
+      },
+      {
+        "name": "Oops! The Danger Freak - 2:00 pm",
+        "tags": []
+      },
+      {
+        "name": "Brother Paul Magician - 2:45 pm",
+        "tags": []
+      },
+      {
+        "name": "Zilch the Torysteller - 3:15 pm",
+        "tags": []
+      },
+      {
+        "name": "Brother Paul Magician - 4:00 pm",
+        "tags": []
+      },
+      {
+        "name": "Oops! The Danger Freak - 4:30 pm",
+        "tags": []
+      },
+      {
+        "name": "Zilch the Torysteller - 5:15 pm",
+        "tags": []
+      }
+    ],
+    "userNotes": [],
+    "userRating": null,
+    "photos": []
+  },
+  {
+    "id": "stage-crown",
+    "type": "stage",
+    "categoryLabel": "Area 7 - Narrow Market",
+    "icon": "🎭",
+    "name": "Crown Stage",
+    "x": 1366,
+    "y": 439,
+    "items": [
+      {
+        "name": "The Littlest Dragon - 10:00 am",
+        "tags": []
+      },
+      {
+        "name": "The Tortuga Twins - 10:45 am",
+        "tags": []
+      },
+      {
+        "name": "Johnny Phoenix - 11:30 am",
+        "tags": []
+      },
+      {
+        "name": "The Tortuga Twins - 12:15 pm",
+        "tags": []
+      },
+      {
+        "name": "Johnny Phoenix - 1:00 pm",
+        "tags": []
+      },
+      {
+        "name": "The Tortuga Twins - 1:45 pm",
+        "tags": []
+      },
+      {
+        "name": "Johnny Phoenix - 2:30 pm",
+        "tags": []
+      },
+      {
+        "name": "The Tortuga Twins - 3:15 pm",
+        "tags": []
+      },
+      {
+        "name": "Johnny Phoenix - 4:00 pm",
+        "tags": []
+      },
+      {
+        "name": "The Tortuga Twins - 5:00 pm",
+        "tags": []
+      }
+    ],
+    "userNotes": [],
+    "userRating": null,
+    "photos": []
+  },
+  {
+    "id": "stage-bear",
+    "type": "stage",
+    "categoryLabel": "Area 6 - Upson Downs",
+    "icon": "🐻",
+    "name": "Bear Stage",
+    "x": 1016,
+    "y": 541,
+    "items": [
+      {
+        "name": "Minnesota Traditional Morris - 9:45 am",
+        "tags": []
+      },
+      {
+        "name": "Royal Scottish Country Dancers - 10:15 am",
+        "tags": []
+      },
+      {
+        "name": "Earthquest Birds of Prey - 11:15 am",
+        "tags": []
+      },
+      {
+        "name": "Royal Scottish Country Dancers - 12:00 pm",
+        "tags": []
+      },
+      {
+        "name": "Earthquest Birds of Prey - 2:15 pm",
+        "tags": []
+      },
+      {
+        "name": "Royal Scottish Country Dancers - 3:15 pm",
+        "tags": []
+      },
+      {
+        "name": "Minnesota Traditional Morris - 4:00 pm",
+        "tags": []
+      },
+      {
+        "name": "Royal Scottish Country Dancers - 4:30 pm",
+        "tags": []
+      },
+      {
+        "name": "Earthquest Birds of Prey - 5:00 pm",
+        "tags": []
+      }
+    ],
+    "userNotes": [],
+    "userRating": null,
+    "photos": []
+  },
+  {
+    "id": "stage-viking",
+    "type": "stage",
+    "categoryLabel": "Area 1 - Shepherd's Green",
+    "icon": "🛡️",
+    "name": "Viking Encampment",
+    "x": 622,
+    "y": 927,
+    "items": [
+      {
+        "name": "Battle Sagas - 10:00 am",
+        "tags": []
+      },
+      {
+        "name": "Fight Show - 11:00 am",
+        "tags": []
+      },
+      {
+        "name": "Viking Ceremony - 1:00 pm",
+        "tags": []
+      },
+      {
+        "name": "Folktales and Lost Myths - 2:00 pm",
+        "tags": []
+      },
+      {
+        "name": "Fight Show - 3:00 pm",
+        "tags": []
+      },
+      {
+        "name": "Gods & Monsters - 4:00 pm",
+        "tags": []
+      },
+      {
+        "name": "Viking Games - 5:00 pm",
+        "tags": []
+      }
+    ],
+    "userNotes": [],
+    "userRating": null,
+    "photos": []
+  },
+  {
+    "id": "shop-badger-blades",
+    "type": "shop",
+    "subType": "blades",
+    "categoryLabel": "Area 4 - Marketplace",
+    "icon": "⚔️",
+    "name": "Badger Blades (#732)",
+    "x": 1375,
+    "y": 616,
+    "items": [
+      {
+        "name": "Heavy-Duty Hand-Forged Battle Swords",
+        "tags": []
+      },
+      {
+        "name": "Custom Daggers & Axes with Lifetime Guarantee",
+        "tags": []
+      }
+    ],
+    "userNotes": [],
+    "userRating": null,
+    "photos": []
+  },
+  {
+    "id": "shop-arms-armor",
+    "type": "shop",
+    "subType": "blades",
+    "categoryLabel": "Area 4 - Marketplace",
+    "icon": "🛡️",
+    "name": "Arms & Armor (#146-148)",
+    "x": 1543,
+    "y": 1067,
+    "items": [
+      {
+        "name": "Museum-Quality Replicas & Custom Rapier Swords",
+        "tags": []
+      },
+      {
+        "name": "Battle Shields & Steel Gauntlets",
+        "tags": []
+      }
+    ],
+    "userNotes": [],
+    "userRating": null,
+    "photos": []
+  },
+  {
+    "id": "shop-sabersmith",
+    "type": "shop",
+    "subType": "blades",
+    "categoryLabel": "Area 4 - Marketplace",
+    "icon": "⚔️",
+    "name": "Sabersmith (#401-402)",
+    "x": 921,
+    "y": 385,
+    "items": [
+      {
+        "name": "Hand-Forged Swords, Scimitars & Cleavers",
+        "tags": []
+      }
+    ],
+    "userNotes": [],
+    "userRating": null,
+    "photos": []
+  },
+  {
+    "id": "shop-boss-wench",
+    "type": "shop",
+    "subType": "apparel",
+    "categoryLabel": "Area 6 - Upson Downs",
+    "icon": "👗",
+    "name": "Boss Wench (#646-650)",
+    "x": 1366,
+    "y": 630,
+    "items": [
+      {
+        "name": "Custom Bodices, Skirts & Corsets",
+        "tags": []
+      }
+    ],
+    "userNotes": [],
+    "userRating": null,
+    "photos": []
+  },
+  {
+    "id": "shop-dragons-hide",
+    "type": "shop",
+    "subType": "leather",
+    "categoryLabel": "Area 4 - Marketplace",
+    "icon": "🛡️",
+    "name": "Dragon's Hide Leather (#449-450)",
+    "x": 1180,
+    "y": 393,
+    "items": [
+      {
+        "name": "Custom Leather Armor, Belts & Bracers",
+        "tags": []
+      },
+      {
+        "name": "Drinking Horn Holsters & Pouches",
+        "tags": []
+      }
+    ],
+    "userNotes": [],
+    "userRating": null,
+    "photos": []
+  },
+  {
+    "id": "shop-son-of-sandlar",
+    "type": "shop",
+    "subType": "leather",
+    "categoryLabel": "Area 5 - Folkstone Well",
+    "icon": "👢",
+    "name": "Son of Sandlar (#508)",
+    "x": 1695,
+    "y": 559,
+    "items": [
+      {
+        "name": "Handmade Custom Leather Boots & Footwear",
+        "tags": []
+      }
+    ],
+    "userNotes": [],
+    "userRating": null,
+    "photos": []
+  },
+  {
+    "id": "shop-catskill-moccasins",
+    "type": "shop",
+    "subType": "leather",
+    "categoryLabel": "Area 6 - Upson Downs",
+    "icon": "👢",
+    "name": "Catskill Mountain Moccasins (#630)",
+    "x": 1271,
+    "y": 649,
+    "items": [
+      {
+        "name": "Custom Fitted Moccasins & Boots",
+        "tags": []
+      }
+    ],
+    "userNotes": [],
+    "userRating": null,
+    "photos": []
+  },
+  {
+    "id": "shop-dhusara",
+    "type": "shop",
+    "subType": "jewelry",
+    "categoryLabel": "Area 4 - Marketplace",
+    "icon": "⛓️",
+    "name": "Dhusara Chainmaille (#451)",
+    "x": 1179,
+    "y": 385,
+    "items": [
+      {
+        "name": "Handmade Chainmaille Jewelry & Headdresses",
+        "tags": []
+      }
+    ],
+    "userNotes": [],
+    "userRating": null,
+    "photos": []
+  },
+  {
+    "id": "shop-nagle-forge",
+    "type": "shop",
+    "subType": "jewelry",
+    "categoryLabel": "Area 4 - Marketplace",
+    "icon": "💍",
+    "name": "Nagle Forge & Foundry (#418)",
+    "x": 1070,
+    "y": 448,
+    "items": [
+      {
+        "name": "Celtic & Norse Bronze/Silver Jewelry",
+        "tags": []
+      }
+    ],
+    "userNotes": [],
+    "userRating": null,
+    "photos": []
+  },
+  {
+    "id": "shop-candlemagic",
+    "type": "shop",
+    "subType": "pottery",
+    "categoryLabel": "Area 1 - Shepherd's Green",
+    "icon": "🕯️",
+    "name": "Ye Olde Candlestick Maker (#133)",
+    "x": 980,
+    "y": 940,
+    "items": [
+      {
+        "name": "Hand-Dipped Beeswax Candles & Carvings",
+        "tags": []
+      }
+    ],
+    "userNotes": [],
+    "userRating": null,
+    "photos": []
+  },
+  {
+    "id": "shop-john-coiner",
+    "type": "shop",
+    "subType": "pottery",
+    "categoryLabel": "Area 7 - Narrow Market",
+    "icon": "🏺",
+    "name": "John Coiner Pottery (#729-731)",
+    "x": 1440,
+    "y": 690,
+    "items": [
+      {
+        "name": "Hand-Thrown Stoneware Tankards, Mugs & Jugs",
+        "tags": []
+      }
+    ],
+    "userNotes": [],
+    "userRating": null,
+    "photos": []
+  },
+  {
+    "id": "food-turkey-leg-1",
+    "type": "food",
+    "categoryLabel": "Area 1 - Shepherd's Green",
+    "icon": "🍗",
+    "name": "King's Turkey Leg Stand",
+    "x": 775,
+    "y": 961,
+    "items": [
+      {
+        "name": "Jumbo Smoked Turkey Leg",
+        "tags": [
+          "●"
+        ]
+      },
+      {
+        "name": "Beef Stick / Jerky",
+        "tags": []
+      },
+      {
+        "name": "Breakfast Dog",
+        "tags": []
+      }
+    ],
+    "userNotes": [],
+    "userRating": null,
+    "photos": []
+  },
+  {
+    "id": "food-oven-bakery",
+    "type": "food",
+    "categoryLabel": "Area 2 - Oven Hill Market",
+    "icon": "🍏",
+    "name": "Oven Hill Apple Bakery",
+    "x": 798,
+    "y": 586,
+    "items": [
+      {
+        "name": "Apple Cider Floats & Tarts",
+        "tags": [
+          "■"
+        ]
+      },
+      {
+        "name": "Apple Walnut Bread Pudding",
+        "tags": []
+      },
+      {
+        "name": "Unicorn Cake & Cream Puffs",
+        "tags": [
+          "■"
+        ]
+      }
+    ],
+    "userNotes": [],
+    "userRating": null,
+    "photos": []
+  },
+  {
+    "id": "food-treetop-pub",
+    "type": "food",
+    "categoryLabel": "Area 3 - Treetop Round",
+    "icon": "🥩",
+    "name": "Treetop British Pub Fare",
+    "x": 838,
+    "y": 495,
+    "items": [
+      {
+        "name": "Scotch Eggs & Banger & Mash",
+        "tags": []
+      },
+      {
+        "name": "Shepherd's Pie & Cabbage Rolls",
+        "tags": []
+      },
+      {
+        "name": "Pierogi & Meatballs",
+        "tags": []
+      }
+    ],
+    "userNotes": [],
+    "userRating": null,
+    "photos": []
+  },
+  {
+    "id": "food-pickle-pizza",
+    "type": "food",
+    "categoryLabel": "Area 8 - Cartwheel Cove",
+    "icon": "🍕",
+    "name": "Pickle Pizza & Cove Eats",
+    "x": 529,
+    "y": 334,
+    "items": [
+      {
+        "name": "Dill Pickle Pizza Slices",
+        "tags": [
+          "●",
+          "■"
+        ]
+      },
+      {
+        "name": "Deep Fried Sushi on a Stick",
+        "tags": [
+          "■"
+        ]
+      },
+      {
+        "name": "Chicken & Waffles",
+        "tags": []
+      },
+      {
+        "name": "Root Beer Floats",
+        "tags": [
+          "●",
+          "■"
+        ]
+      }
+    ],
+    "userNotes": [],
+    "userRating": null,
+    "photos": []
+  },
+  {
+    "id": "pub-canterbury",
+    "type": "pub",
+    "categoryLabel": "Area 1 - Shepherd's Green",
+    "icon": "🍺",
+    "name": "Canterbury Mead & Alehouse",
+    "x": 807,
+    "y": 944,
+    "items": [
+      {
+        "name": "Honey Mead & Craft Cocktails",
+        "tags": [
+          "●"
+        ]
+      },
+      {
+        "name": "Bieler Pere & Fils Rosé & Daisy Pinot Grigio",
+        "tags": []
+      },
+      {
+        "name": "Pixie Paloma Margarita & Woodchuck Cider",
+        "tags": [
+          "●"
+        ]
+      }
+    ],
+    "userNotes": [],
+    "userRating": null,
+    "photos": []
+  },
+  {
+    "id": "pub-folkstone",
+    "type": "pub",
+    "categoryLabel": "Area 5 - Folkstone Well",
+    "icon": "🍷",
+    "name": "Folkstone Watering Hole",
+    "x": 1740,
+    "y": 587,
+    "items": [
+      {
+        "name": "Sutter Home & Menage A Trois Wines",
+        "tags": []
+      },
+      {
+        "name": "Woodchuck Hard Cider",
+        "tags": [
+          "●"
+        ]
+      },
+      {
+        "name": "Flaming Beaver & Craft Cocktails",
+        "tags": []
+      }
+    ],
+    "userNotes": [],
+    "userRating": null,
+    "photos": []
+  }
+]

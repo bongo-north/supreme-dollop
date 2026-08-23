@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MN Renaissance Festival - Interactive Map (Sprint 9)</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body, html { width: 100%; height: 100%; overflow: hidden; background: #1a120c; font-family: Georgia, serif; }
+    
+    #map-container {
+      width: 100vw;
+      height: 100vh;
+      cursor: grab;
+      position: relative;
+      overflow: hidden;
+      background: radial-gradient(circle, #2c1e14 0%, #0d0906 100%);
+      touch-action: none;
+    }
+    #map-container:active { cursor: grabbing; }
+
+    #map-wrapper {
+      position: absolute;
+      transform-origin: 0 0;
+      will-change: transform;
+    }
+
+    #map-image {
+      display: block;
+      user-select: none;
+      -webkit-user-drag: none;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.8);
+      border-radius: 4px;
+    }
+
+    /* Control Panel Overlay */
+    .panel {
+      position: absolute;
+      background: rgba(44, 30, 20, 0.95);
+      border: 2px solid #8c6d3f;
+      border-radius: 8px;
+      padding: 12px 16px;
+      color: #fef3d6;
+      z-index: 20;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.7);
+    }
+
+    .top-panel {
+      top: 16px;
+      left: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      width: 350px;
+    }
+
+    .panel-title {
+      font-size: 11px;
+      font-weight: bold;
+      color: #d4b581;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-bottom: 1px solid #8c6d3f;
+      padding-bottom: 2px;
+    }
+
+    .filter-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 4px;
+    }
+
+    .filter-btn {
+      background: #3b2314;
+      color: #f3e5ab;
+      border: 1px solid #8c6d3f;
+      padding: 5px 4px;
+      border-radius: 4px;
+      font-size: 10px;
+      cursor: pointer;
+      font-weight: bold;
+      text-align: center;
+      white-space: nowrap;
+    }
+    .filter-btn.active {
+      background: #8c6d3f;
+      color: #1a120c;
+    }
+
+    select.area-select {
+      background: #1a120c;
+      color: #f3e5ab;
+      border: 1px solid #8c6d3f;
+      padding: 5px 8px;
+      border-radius: 4px;
+      font-family: Georgia, serif;
+      font-size: 11px;
+      width: 100%;
+      cursor: pointer;
+    }
+
+    .toggle-label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      cursor: pointer;
+      color: #e6c594;
+    }
+
+    .export-btn {
+      background: #6e260e;
+      color: #fef3d6;
+      border: 1px solid #d4b581;
+      padding: 6px 10px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .export-btn:hover { background: #8b3a2b; }
+
+    .coord-readout {
+      font-size: 11px;
+      color: #4ade80;
+      font-family: monospace;
+      background: #1a120c;
+      padding: 4px 8px;
+      border-radius: 4px;
+      border: 1px solid #2e7d32;
+    }
+
+    /* Floating Canvas Controls */
+    .controls {
+      position: absolute;
+      bottom: 24px;
+      right: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      z-index: 10;
+    }
+
+    .btn {
+      width: 44px;
+      height: 44px;
+      background: #4a3319;
+      color: #f3e5ab;
+      border: 2px solid #8c6d3f;
+      border-radius: 6px;
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+      transition: background 0.2s;
+    }
+    .btn:hover { background: #634522; }
+
+    /* Upright Teardrop Pointer Pin */
+    .pin {
+      position: absolute;
+      transform: translate(-50%, -100%);
+      cursor: pointer;
+      z-index: 5;
+      transition: transform 0.15s ease-out;
+      user-select: none;
+    }
+    .pin.draggable { cursor: move; }
+    .pin.selected { z-index: 15; }
+    .pin:hover, .pin.selected {
+      transform: translate(-50%, -108%) scale(1.15);
+    }
+
+    .pin-badge {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 5px 10px;
+      border-radius: 12px;
+      border: 2px solid #d4b581;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.7);
+      background: #6e260e;
+      color: #fef3d6;
+      font-size: 11px;
+      font-weight: bold;
+      white-space: nowrap;
+    }
+
+    .pin-badge::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 0;
+      border-left: 7px solid transparent;
+      border-right: 7px solid transparent;
+      border-top: 8px solid #d4b581;
+    }
+
+    .pin-food .pin-badge { background: #6e260e; color: #fef3d6; border-color: #d4b581; }
+    .pin-food .pin-badge::after { border-top-color: #d4b581; }
+
+    .pin-pub .pin-badge { background: #78350f; color: #fef3c7; border-color: #f59e0b; }
+    .pin-pub .pin-badge::after { border-top-color: #f59e0b; }
+
+    .pin-shop .pin-badge { background: #14532d; color: #f0fdf4; border-color: #4ade80; }
+    .pin-shop .pin-badge::after { border-top-color: #4ade80; }
+
+    .pin-stage .pin-badge { background: #1e3a8a; color: #eff6ff; border-color: #60a5fa; }
+    .pin-stage .pin-badge::after { border-top-color: #60a5fa; }
+
+    .pin-bookmarked .pin-badge { box-shadow: 0 0 14px #fbbf24; border-color: #fbbf24; }
+    .pin-bookmarked .pin-badge::after { border-top-color: #fbbf24; }
+
+    /* Slide-Out Vendor Drawer */
+    .drawer {
+      position: fixed;
+      top: 0; right: -400px;
+      width: 380px; height: 100vh;
+      background: #f2e3c6;
+      border-left: 5px double #7a5c38;
+      box-shadow: -8px 0 24px rgba(0,0,0,0.7);
+      z-index: 100;
+      transition: right 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      color: #2c1e14;
+      overflow-y: auto;
+    }
+    .drawer.open { right: 0; }
+
+    .drawer-close {
+      position: absolute;
+      top: 16px; right: 16px;
+      background: none; border: none;
+      font-size: 24px; color: #7a5c38;
+      cursor: pointer; font-weight: bold;
+    }
+    .drawer-category {
+      font-size: 11px; font-weight: bold;
+      text-transform: uppercase; color: #8c5d25;
+      letter-spacing: 1px; margin-bottom: 4px;
+    }
+    .drawer-title {
+      font-size: 22px; color: #6e260e;
+      font-weight: bold; margin-bottom: 12px;
+      line-height: 1.2;
+    }
+
+    .wishlist-btn {
+      background: #8c6d3f; color: #fef3d6;
+      border: 1px solid #5c3c16; padding: 8px 12px;
+      border-radius: 6px; font-size: 12px; font-weight: bold;
+      cursor: pointer; margin-bottom: 16px;
+      display: flex; align-items: center; justify-content: center; gap: 6px;
+    }
+    .wishlist-btn.active { background: #d97706; color: #ffffff; }
+
+    .item-list { list-style: none; display: flex; flex-direction: column; gap: 8px; margin-top: 8px; }
+    .item-row {
+      display: flex; justify-content: space-between; align-items: center;
+      border-bottom: 1px dashed #c4a47c; padding-bottom: 6px; font-size: 13px;
+    }
+    .tag { font-size: 10px; font-weight: bold; padding: 2px 5px; border-radius: 4px; margin-left: 4px; }
+    .gf { background: #dcfce7; color: #166534; }
+    .v { background: #ffedd5; color: #9a3412; }
+    .vg { background: #dbeafe; color: #1e40af; }
+    textarea.json-export {
+      width: 100%; height: 160px;
+      background: #1a120c; color: #f3e5ab;
+      font-family: monospace; padding: 8px; border-radius: 4px; margin-top: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top-Left Control Panel -->
+  <div class="panel top-panel">
+    <div class="panel-title">Category & Sub-Type Filter</div>
+    <div class="filter-grid">
+      <button class="filter-btn active" id="btn-all" onclick="filterCategory('all')">All Pins</button>
+      <button class="filter-btn" id="btn-food" onclick="filterCategory('food')">🍖 Food</button>
+      <button class="filter-btn" id="btn-pub" onclick="filterCategory('pub')">🍺 Pubs</button>
+      <button class="filter-btn" id="btn-stage" onclick="filterCategory('stage')">🎭 Stages</button>
+      <button class="filter-btn" id="btn-blades" onclick="filterCategory('blades')">⚔️ Blades</button>
+      <button class="filter-btn" id="btn-leather" onclick="filterCategory('leather')">🛡️ Leather</button>
+      <button class="filter-btn" id="btn-jewelry" onclick="filterCategory('jewelry')">💍 Jewelry</button>
+      <button class="filter-btn" id="btn-apparel" onclick="filterCategory('apparel')">👗 Apparel</button>
+      <button class="filter-btn" id="btn-starred" onclick="filterCategory('starred')">⭐ Wishlist</button>
+    </div>
+
+    <div class="panel-title" style="margin-top: 2px;">Grounds Zone Filter</div>
+    <select class="area-select" id="area-filter" onchange="filterArea(this.value)">
+      <option value="all">All Zones & Areas</option>
+      <option value="Area 1 - Shepherd's Green">Area 1 - Shepherd's Green</option>
+      <option value="Area 2 - Oven Hill Market">Area 2 - Oven Hill Market</option>
+      <option value="Area 3 - Treetop Round">Area 3 - Treetop Round</option>
+      <option value="Area 4 - Marketplace">Area 4 - Marketplace</option>
+      <option value="Area 5 - Folkstone Well">Area 5 - Folkstone Well</option>
+      <option value="Area 6 - Upson Downs">Area 6 - Upson Downs</option>
+      <option value="Area 7 - Narrow Market">Area 7 - Narrow Market</option>
+      <option value="Area 8 - Cartwheel Cove">Area 8 - Cartwheel Cove</option>
+    </select>
+
+    <div class="panel-title" style="margin-top: 2px;">Pin Calibration Tool</div>
+    <label class="toggle-label">
+      <input type="checkbox" id="edit-mode-toggle" onchange="toggleEditMode()">
+      Unlock Pin Dragging & Keyboard Nudge
+    </label>
+    <div id="coord-readout" class="coord-readout">Click or drag a pin to see X, Y</div>
+    <button class="export-btn" onclick="exportCoordinates()">💾 Save / Export Pin Database</button>
+  </div>
+
+  <div id="map-container">
+    <div id="map-wrapper">
+      <img id="map-image" src="./mnrf-map.png" alt="MN Renaissance Festival Map">
+      <div id="pins-layer"></div>
+    </div>
+  </div>
+
+  <!-- Zoom Controls -->
+  <div class="controls">
+    <button class="btn" title="Zoom In" onclick="zoom(1.25)">+</button>
+    <button class="btn" title="Zoom Out" onclick="zoom(0.8)">−</button>
+    <button class="btn" title="Reset View" onclick="resetView()">⟲</button>
+  </div>
+
+  <!-- Slide-Out Vendor Drawer -->
+  <div class="drawer" id="vendor-drawer">
+    <button class="drawer-close" onclick="closeDrawer()">&times;</button>
+    <div class="drawer-category" id="drawer-category">Category</div>
+    <div class="drawer-title" id="drawer-title">Vendor Name</div>
+    <button class="wishlist-btn" id="drawer-wishlist-btn" onclick="toggleCurrentWishlist()">⭐ Add to Wishlist</button>
+    <div id="drawer-body"></div>
+  </div>
+
+  <script>
+    let poiData = [];
+    let wishlistedIds = new Set(JSON.parse(localStorage.getItem('mnrf_wishlist')) || []);
+    let currentSelectedPoi = null;
+
+    const container = document.getElementById('map-container');
+    const wrapper = document.getElementById('map-wrapper');
+    const img = document.getElementById('map-image');
+    const pinsLayer = document.getElementById('pins-layer');
+    const drawer = document.getElementById('vendor-drawer');
+
+    let scale = 1;
+    let pointX = 0, pointY = 0;
+    let startX = 0, startY = 0;
+    let isPanning = false;
+    let isEditMode = false;
+    let activeFilter = 'all';
+    let activeAreaFilter = 'all';
+    let selectedPinPoi = null;
+
+    const MIN_SCALE = 0.3, MAX_SCALE = 2.5; 
+
+    async function loadMasterDatabase() {
+      const localCalibrated = localStorage.getItem('mnrf_calibrated_db');
+      if (localCalibrated) {
+        poiData = JSON.parse(localCalibrated);
+        renderPins();
+      } else {
+        try {
+          const res = await fetch('./data/renfest-db.json');
+          poiData = await res.json();
+          renderPins();
+        } catch (err) {
+          console.error("Database fetch error:", err);
+        }
+      }
+    }
+
+    function setTransform() {
+      wrapper.style.transform = `translate(${pointX}px, ${pointY}px) scale(${scale})`;
+    }
+
+    function filterCategory(cat) {
+      activeFilter = cat;
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      document.getElementById(`btn-${cat}`).classList.add('active');
+      renderPins();
+    }
+
+    function filterArea(area) {
+      activeAreaFilter = area;
+      renderPins();
+    }
+
+    function toggleEditMode() {
+      isEditMode = document.getElementById('edit-mode-toggle').checked;
+      renderPins();
+    }
+
+    function renderPins() {
+      pinsLayer.innerHTML = '';
+      poiData.forEach(poi => {
+        const isStarred = wishlistedIds.has(poi.id);
+        
+        if (activeFilter === 'starred' && !isStarred) return;
+        if (activeFilter !== 'all' && activeFilter !== 'starred') {
+          if (poi.type !== activeFilter && poi.subType !== activeFilter) return;
+        }
+        if (activeAreaFilter !== 'all' && poi.categoryLabel !== activeAreaFilter) return;
+
+        const pin = document.createElement('div');
+        const isSelected = selectedPinPoi && selectedPinPoi.id === poi.id;
+        pin.className = `pin pin-${poi.type} ${isStarred ? 'pin-bookmarked' : ''} ${isEditMode ? 'draggable' : ''} ${isSelected ? 'selected' : ''}`;
+        pin.style.left = poi.x + 'px';
+        pin.style.top = poi.y + 'px';
+        
+        const starBadge = isStarred ? '⭐ ' : '';
+        pin.innerHTML = `<div class="pin-badge">${starBadge}${poi.icon} ${poi.name}</div>`;
+
+        pin.onclick = (e) => {
+          e.stopPropagation();
+          selectPin(poi);
+          if (!isEditMode) openDrawer(poi);
+        };
+
+        if (isEditMode) {
+          pin.onmousedown = (e) => startPinDrag(e, poi);
+        }
+        pinsLayer.appendChild(pin);
+      });
+    }
+
+    function selectPin(poi) {
+      selectedPinPoi = poi;
+      document.getElementById('coord-readout').innerText = `${poi.name}: X=${poi.x}, Y=${poi.y}`;
+      renderPins();
+    }
+
+    function startPinDrag(e, poi) {
+      e.stopPropagation();
+      selectPin(poi);
+
+      const onMouseMove = (moveEvent) => {
+        const rect = img.getBoundingClientRect();
+        poi.x = Math.round((moveEvent.clientX - rect.left) / scale);
+        poi.y = Math.round((moveEvent.clientY - rect.top) / scale);
+        document.getElementById('coord-readout').innerText = `${poi.name}: X=${poi.x}, Y=${poi.y}`;
+        renderPins();
+      };
+
+      const onMouseUp = () => {
+        localStorage.setItem('mnrf_calibrated_db', JSON.stringify(poiData));
+        window.removeEventListener('mousemove', onMouseMove);
+        window.removeEventListener('mouseup', onMouseUp);
+      };
+
+      window.addEventListener('mousemove', onMouseMove);
+      window.addEventListener('mouseup', onMouseUp);
+    }
+
+    window.addEventListener('keydown', (e) => {
+      if (!isEditMode || !selectedPinPoi) return;
+      const step = e.shiftKey ? 10 : 1;
+      let handled = false;
+
+      if (e.key === 'ArrowLeft') { selectedPinPoi.x -= step; handled = true; }
+      if (e.key === 'ArrowRight') { selectedPinPoi.x += step; handled = true; }
+      if (e.key === 'ArrowUp') { selectedPinPoi.y -= step; handled = true; }
+      if (e.key === 'ArrowDown') { selectedPinPoi.y += step; handled = true; }
+
+      if (handled) {
+        e.preventDefault();
+        document.getElementById('coord-readout').innerText = `${selectedPinPoi.name}: X=${selectedPinPoi.x}, Y=${selectedPinPoi.y}`;
+        localStorage.setItem('mnrf_calibrated_db', JSON.stringify(poiData));
+        renderPins();
+      }
+    });
+
+    function openDrawer(poi) {
+      currentSelectedPoi = poi;
+      document.getElementById('drawer-category').innerText = poi.categoryLabel;
+      document.getElementById('drawer-title').innerText = poi.name;
+      
+      updateWishlistBtnUI();
+
+      let itemsHtml = (poi.items || []).map(item => {
+        let tagsHtml = (item.tags || []).map(t => {
+          if (t === '●') return '<span class="tag gf">GF</span>';
+          if (t === '■') return '<span class="tag v">Veg</span>';
+          if (t === '▲') return '<span class="tag vg">Vegan</span>';
+          return '';
+        }).join('');
+        return `<li class="item-row"><span>${item.name}</span><div>${tagsHtml}</div></li>`;
+      }).join('');
+
+      document.getElementById('drawer-body').innerHTML = `<ul class="item-list">${itemsHtml}</ul>`;
+      drawer.classList.add('open');
+    }
+
+    function closeDrawer() {
+      drawer.classList.remove('open');
+      currentSelectedPoi = null;
+    }
+
+    function toggleCurrentWishlist() {
+      if (!currentSelectedPoi) return;
+      const id = currentSelectedPoi.id;
+      if (wishlistedIds.has(id)) {
+        wishlistedIds.delete(id);
+      } else {
+        wishlistedIds.add(id);
+      }
+      localStorage.setItem('mnrf_wishlist', JSON.stringify(Array.from(wishlistedIds)));
+      updateWishlistBtnUI();
+      renderPins();
+    }
+
+    function updateWishlistBtnUI() {
+      const btn = document.getElementById('drawer-wishlist-btn');
+      if (currentSelectedPoi && wishlistedIds.has(currentSelectedPoi.id)) {
+        btn.classList.add('active');
+        btn.innerHTML = '★ Bookmarked in Wishlist';
+      } else {
+        btn.classList.remove('active');
+        btn.innerHTML = '⭐ Add to Wishlist';
+      }
+    }
+
+    function exportCoordinates() {
+      const jsonStr = JSON.stringify(poiData, null, 2);
+      openDrawer({
+        categoryLabel: "Database Export",
+        name: "Master renfest-db.json",
+        items: []
+      });
+      document.getElementById('drawer-body').innerHTML = `
+        <p style="font-size: 12px; margin-bottom: 8px;">Copy and paste this JSON into <code>/data/renfest-db.json</code>:</p>
+        <button class="export-btn" style="width:100%; margin-bottom:8px;" onclick="copyJsonToClipboard()">📋 Copy JSON to Clipboard</button>
+        <textarea id="json-export-text" class="json-export" readonly>${jsonStr}</textarea>
+      `;
+    }
+
+    function copyJsonToClipboard() {
+      const txt = document.getElementById('json-export-text');
+      txt.select();
+      navigator.clipboard.writeText(txt.value);
+      alert("JSON copied to clipboard! Paste it into /data/renfest-db.json");
+    }
+
+    function resetView() {
+      const containerWidth = container.clientWidth;
+      const containerHeight = container.clientHeight;
+      const imgWidth = img.naturalWidth || 1200;
+      const imgHeight = img.naturalHeight || 800;
+
+      scale = Math.min(containerWidth / imgWidth, containerHeight / imgHeight) * 0.95;
+      scale = Math.min(Math.max(MIN_SCALE, scale), MAX_SCALE);
+
+      pointX = (containerWidth - imgWidth * scale) / 2;
+      pointY = (containerHeight - imgHeight * scale) / 2;
+      setTransform();
+    }
+
+    img.onload = () => { resetView(); loadMasterDatabase(); };
+    if (img.complete) { resetView(); loadMasterDatabase(); }
+    window.onresize = resetView;
+
+    // Pan & Zoom Mechanics
+    container.addEventListener('mousedown', (e) => {
+      if (e.target.closest('.panel') || e.target.closest('.controls') || e.target.closest('.drawer') || isEditMode) return;
+      e.preventDefault();
+      startX = e.clientX - pointX;
+      startY = e.clientY - pointY;
+      isPanning = true;
+    });
+
+    window.addEventListener('mouseup', () => { isPanning = false; });
+
+    container.addEventListener('mousemove', (e) => {
+      if (!isPanning) return;
+      e.preventDefault();
+      pointX = e.clientX - startX;
+      pointY = e.clientY - startY;
+      setTransform();
+    });
+
+    container.addEventListener('wheel', (e) => {
+      e.preventDefault();
+      const xs = (e.clientX - pointX) / scale;
+      const ys = (e.clientY - pointY) / scale;
+      const delta = -e.deltaY;
+      
+      let targetScale = delta > 0 ? scale * 1.15 : scale / 1.15;
+      scale = Math.min(Math.max(MIN_SCALE, targetScale), MAX_SCALE);
+
+      pointX = e.clientX - xs * scale;
+      pointY = e.clientY - ys * scale;
+      setTransform();
+    }, { passive: false });
+
+    function zoom(factor) {
+      let targetScale = scale * factor;
+      scale = Math.min(Math.max(MIN_SCALE, targetScale), MAX_SCALE);
+      setTransform();
+    }
+  </script>
+</body>
+</html>
