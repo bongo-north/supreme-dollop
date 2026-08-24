@@ -5,18 +5,51 @@
     "categoryLabel": "Area 1 - Shepherd's Green",
     "icon": "🍗",
     "name": "Shepherd's King's Feast & Meats",
-    "x": 966,
-    "y": 980,
+    "x": 820,
+    "y": 1068,
     "items": [
-      { "name": "Jumbo Smoked Turkey Leg", "tags": ["●"] },
-      { "name": "Beef Stick / Jerky", "tags": [] },
-      { "name": "Breakfast Dog", "tags": [] },
-      { "name": "BLT Dog", "tags": [] },
-      { "name": "Deep Fried PB & J", "tags": ["■"] },
-      { "name": "Deep Fried Twinkie", "tags": ["■"] },
-      { "name": "Dragon Juice", "tags": [] },
-      { "name": "Turkey Burger", "tags": [] },
-      { "name": "Turkey Leg Nachos", "tags": [] }
+      {
+        "name": "Jumbo Smoked Turkey Leg",
+        "tags": [
+          "●"
+        ]
+      },
+      {
+        "name": "Beef Stick / Jerky",
+        "tags": []
+      },
+      {
+        "name": "Breakfast Dog",
+        "tags": []
+      },
+      {
+        "name": "BLT Dog",
+        "tags": []
+      },
+      {
+        "name": "Deep Fried PB & J",
+        "tags": [
+          "■"
+        ]
+      },
+      {
+        "name": "Deep Fried Twinkie",
+        "tags": [
+          "■"
+        ]
+      },
+      {
+        "name": "Dragon Juice",
+        "tags": []
+      },
+      {
+        "name": "Turkey Burger",
+        "tags": []
+      },
+      {
+        "name": "Turkey Leg Nachos",
+        "tags": []
+      }
     ],
     "userNotes": [],
     "userRating": null,
@@ -28,13 +61,35 @@
     "categoryLabel": "Area 1 - Shepherd's Green",
     "icon": "🍿",
     "name": "Shepherd's Green Sweets & Drinks",
-    "x": 1040,
-    "y": 950,
+    "x": 974,
+    "y": 975,
     "items": [
-      { "name": "Chocolates", "tags": ["■"] },
-      { "name": "Bubble Lemonade", "tags": ["●", "■", "▲"] },
-      { "name": "Lemonade", "tags": ["●", "■", "▲"] },
-      { "name": "Corn Dog", "tags": [] }
+      {
+        "name": "Chocolates",
+        "tags": [
+          "■"
+        ]
+      },
+      {
+        "name": "Bubble Lemonade",
+        "tags": [
+          "●",
+          "■",
+          "▲"
+        ]
+      },
+      {
+        "name": "Lemonade",
+        "tags": [
+          "●",
+          "■",
+          "▲"
+        ]
+      },
+      {
+        "name": "Corn Dog",
+        "tags": []
+      }
     ],
     "userNotes": [],
     "userRating": null,
@@ -46,25 +101,95 @@
     "categoryLabel": "Area 1 - Shepherd's Green",
     "icon": "🍺",
     "name": "Canterbury Mead & Alehouse",
-    "x": 1020,
-    "y": 920,
+    "x": 783,
+    "y": 959,
     "items": [
-      { "name": "Avissi Prosecco", "tags": ["●"] },
-      { "name": "Beer (3 Floyds, Surly, Summit, Midnight Viking Porter)", "tags": [] },
-      { "name": "Bieler Pere & Fils Rosé", "tags": ["●"] },
-      { "name": "Craft Cocktails", "tags": [] },
-      { "name": "Daisy Pinot Grigio", "tags": ["●"] },
-      { "name": "Flaming Beaver", "tags": [] },
-      { "name": "Joel Gott Cabernet / Sauvignon Blanc", "tags": ["●"] },
-      { "name": "Mango El Jimador Tequila Spritz", "tags": [] },
-      { "name": "Menage A Trois Wines", "tags": ["●"] },
-      { "name": "Pixie Paloma Margarita", "tags": [] },
-      { "name": "Ritual Spritz Mocktail", "tags": ["●", "■", "▲"] },
-      { "name": "Royal Refresher Gin Fizz", "tags": [] },
-      { "name": "San Polo Rubio Wine", "tags": ["●"] },
-      { "name": "Seaglass Pinot Grigio / Pinot Noir", "tags": ["●"] },
-      { "name": "Sutter Home White Zinfandel", "tags": ["●"] },
-      { "name": "Woodchuck Cider (Amber, Blueberry, Pearsecco, Pineapple)", "tags": ["●"] }
+      {
+        "name": "Avissi Prosecco",
+        "tags": [
+          "●"
+        ]
+      },
+      {
+        "name": "Beer (3 Floyds, Surly, Summit, Midnight Viking Porter)",
+        "tags": []
+      },
+      {
+        "name": "Bieler Pere & Fils Rosé",
+        "tags": [
+          "●"
+        ]
+      },
+      {
+        "name": "Craft Cocktails",
+        "tags": []
+      },
+      {
+        "name": "Daisy Pinot Grigio",
+        "tags": [
+          "●"
+        ]
+      },
+      {
+        "name": "Flaming Beaver",
+        "tags": []
+      },
+      {
+        "name": "Joel Gott Cabernet / Sauvignon Blanc",
+        "tags": [
+          "●"
+        ]
+      },
+      {
+        "name": "Mango El Jimador Tequila Spritz",
+        "tags": []
+      },
+      {
+        "name": "Menage A Trois Wines",
+        "tags": [
+          "●"
+        ]
+      },
+      {
+        "name": "Pixie Paloma Margarita",
+        "tags": []
+      },
+      {
+        "name": "Ritual Spritz Mocktail",
+        "tags": [
+          "●",
+          "■",
+          "▲"
+        ]
+      },
+      {
+        "name": "Royal Refresher Gin Fizz",
+        "tags": []
+      },
+      {
+        "name": "San Polo Rubio Wine",
+        "tags": [
+          "●"
+        ]
+      },
+      {
+        "name": "Seaglass Pinot Grigio / Pinot Noir",
+        "tags": [
+          "●"
+        ]
+      },
+      {
+        "name": "Sutter Home White Zinfandel",
+        "tags": [
+          "●"
+        ]
+      },
+      {
+        "name": "Woodchuck Cider (Amber, Blueberry, Pearsecco, Pineapple)",
+        "tags": [
+          "●"
+        ]
+      }
     ],
     "userNotes": [],
     "userRating": null,
@@ -76,25 +201,108 @@
     "categoryLabel": "Area 2 - Oven Hill Market",
     "icon": "🍏",
     "name": "Oven Hill Apple Bakery & Sweets",
-    "x": 836,
-    "y": 832,
+    "x": 763,
+    "y": 597,
     "items": [
-      { "name": "Apple Cider Floats", "tags": ["■"] },
-      { "name": "Apple Tarts", "tags": ["■"] },
-      { "name": "Apple Walnut Bread Pudding", "tags": [] },
-      { "name": "Bundt Cake", "tags": ["■"] },
-      { "name": "Cinnamon Roll", "tags": ["■"] },
-      { "name": "Cookies", "tags": ["■"] },
-      { "name": "Cotton Candy", "tags": ["●", "■", "▲"] },
-      { "name": "Cream Puffs", "tags": ["■"] },
-      { "name": "Cupcakes", "tags": ["■"] },
-      { "name": "Donuts", "tags": ["■"] },
-      { "name": "Elephant Ears", "tags": ["■"] },
-      { "name": "Frozen Chocolate Bananas", "tags": ["●", "■"] },
-      { "name": "Gelato", "tags": ["■"] },
-      { "name": "Nut Roll", "tags": ["●", "■"] },
-      { "name": "Penuche Pecan Roll", "tags": ["●", "■"] },
-      { "name": "Unicorn Cake", "tags": ["■"] }
+      {
+        "name": "Apple Cider Floats",
+        "tags": [
+          "■"
+        ]
+      },
+      {
+        "name": "Apple Tarts",
+        "tags": [
+          "■"
+        ]
+      },
+      {
+        "name": "Apple Walnut Bread Pudding",
+        "tags": []
+      },
+      {
+        "name": "Bundt Cake",
+        "tags": [
+          "■"
+        ]
+      },
+      {
+        "name": "Cinnamon Roll",
+        "tags": [
+          "■"
+        ]
+      },
+      {
+        "name": "Cookies",
+        "tags": [
+          "■"
+        ]
+      },
+      {
+        "name": "Cotton Candy",
+        "tags": [
+          "●",
+          "■",
+          "▲"
+        ]
+      },
+      {
+        "name": "Cream Puffs",
+        "tags": [
+          "■"
+        ]
+      },
+      {
+        "name": "Cupcakes",
+        "tags": [
+          "■"
+        ]
+      },
+      {
+        "name": "Donuts",
+        "tags": [
+          "■"
+        ]
+      },
+      {
+        "name": "Elephant Ears",
+        "tags": [
+          "■"
+        ]
+      },
+      {
+        "name": "Frozen Chocolate Bananas",
+        "tags": [
+          "●",
+          "■"
+        ]
+      },
+      {
+        "name": "Gelato",
+        "tags": [
+          "■"
+        ]
+      },
+      {
+        "name": "Nut Roll",
+        "tags": [
+          "●",
+          "■"
+        ]
+      },
+      {
+        "name": "Penuche Pecan Roll",
+        "tags": [
+          "●",
+          "■"
+        ]
+      },
+      {
+        "name": "Unicorn Cake",
+        "tags": [
+          "■"
+        ]
+      }
     ],
     "userNotes": [],
     "userRating": null,
@@ -106,25 +314,92 @@
     "categoryLabel": "Area 2 - Oven Hill Market",
     "icon": "🌽",
     "name": "Oven Hill Grill, Breakfast & Corn",
-    "x": 810,
-    "y": 860,
+    "x": 729,
+    "y": 627,
     "items": [
-      { "name": "Beef Stick / Jerky", "tags": [] },
-      { "name": "Biscuits & Gravy", "tags": [] },
-      { "name": "Bratwurst", "tags": [] },
-      { "name": "Breakfast Burrito", "tags": [] },
-      { "name": "Buffalo Chicken Potato Boat", "tags": [] },
-      { "name": "Corn, Mexican Street", "tags": ["●", "■"] },
-      { "name": "Corn, Roasted", "tags": ["●", "■", "▲"] },
-      { "name": "Falafel", "tags": ["●", "■", "▲"] },
-      { "name": "Fried Cheese", "tags": ["■"] },
-      { "name": "Gyros", "tags": [] },
-      { "name": "Hot Dog", "tags": [] },
-      { "name": "Hot Sausage on a Stick", "tags": [] },
-      { "name": "Mac & Cheese / Mac & Cheese Dog / Bites", "tags": ["■"] },
-      { "name": "Pork Chop on a Stick", "tags": ["●"] },
-      { "name": "Sandwich", "tags": [] },
-      { "name": "Turkey Leg", "tags": ["●"] }
+      {
+        "name": "Beef Stick / Jerky",
+        "tags": []
+      },
+      {
+        "name": "Biscuits & Gravy",
+        "tags": []
+      },
+      {
+        "name": "Bratwurst",
+        "tags": []
+      },
+      {
+        "name": "Breakfast Burrito",
+        "tags": []
+      },
+      {
+        "name": "Buffalo Chicken Potato Boat",
+        "tags": []
+      },
+      {
+        "name": "Corn, Mexican Street",
+        "tags": [
+          "●",
+          "■"
+        ]
+      },
+      {
+        "name": "Corn, Roasted",
+        "tags": [
+          "●",
+          "■",
+          "▲"
+        ]
+      },
+      {
+        "name": "Falafel",
+        "tags": [
+          "●",
+          "■",
+          "▲"
+        ]
+      },
+      {
+        "name": "Fried Cheese",
+        "tags": [
+          "■"
+        ]
+      },
+      {
+        "name": "Gyros",
+        "tags": []
+      },
+      {
+        "name": "Hot Dog",
+        "tags": []
+      },
+      {
+        "name": "Hot Sausage on a Stick",
+        "tags": []
+      },
+      {
+        "name": "Mac & Cheese / Mac & Cheese Dog / Bites",
+        "tags": [
+          "■"
+        ]
+      },
+      {
+        "name": "Pork Chop on a Stick",
+        "tags": [
+          "●"
+        ]
+      },
+      {
+        "name": "Sandwich",
+        "tags": []
+      },
+      {
+        "name": "Turkey Leg",
+        "tags": [
+          "●"
+        ]
+      }
     ],
     "userNotes": [],
     "userRating": null,
@@ -136,27 +411,113 @@
     "categoryLabel": "Area 2 - Oven Hill Market",
     "icon": "🍺",
     "name": "Oven Hill Tower Tavern",
-    "x": 850,
-    "y": 850,
+    "x": 841,
+    "y": 570,
     "items": [
-      { "name": "Avissi Prosecco", "tags": ["●"] },
-      { "name": "Beer (Selection of Draft Ales)", "tags": [] },
-      { "name": "Bieler Pere & Fils Rosé", "tags": ["●"] },
-      { "name": "Bubble Lemonade", "tags": ["●", "■", "▲"] },
-      { "name": "Coffee / Hot Chocolate / Milk", "tags": ["■"] },
-      { "name": "Craft Cocktails", "tags": [] },
-      { "name": "Daisy Pinot Grigio", "tags": ["●"] },
-      { "name": "Flaming Beaver", "tags": [] },
-      { "name": "Joel Gott Wines", "tags": ["●"] },
-      { "name": "Mead (Blackberry Tart, Cottage, Forest Fruit)", "tags": ["●"] },
-      { "name": "Mimosa", "tags": ["●"] },
-      { "name": "Norse Crush Mocktail", "tags": ["●", "■", "▲"] },
-      { "name": "Nutrl Seltzers", "tags": ["●"] },
-      { "name": "Pixie Paloma Margarita", "tags": [] },
-      { "name": "Red Bull", "tags": ["●"] },
-      { "name": "Ritual G&T / Spritz Mocktails", "tags": ["●", "■", "▲"] },
-      { "name": "Royal Refresher Gin Fizz", "tags": [] },
-      { "name": "Woodchuck Cider", "tags": ["●"] }
+      {
+        "name": "Avissi Prosecco",
+        "tags": [
+          "●"
+        ]
+      },
+      {
+        "name": "Beer (Selection of Draft Ales)",
+        "tags": []
+      },
+      {
+        "name": "Bieler Pere & Fils Rosé",
+        "tags": [
+          "●"
+        ]
+      },
+      {
+        "name": "Bubble Lemonade",
+        "tags": [
+          "●",
+          "■",
+          "▲"
+        ]
+      },
+      {
+        "name": "Coffee / Hot Chocolate / Milk",
+        "tags": [
+          "■"
+        ]
+      },
+      {
+        "name": "Craft Cocktails",
+        "tags": []
+      },
+      {
+        "name": "Daisy Pinot Grigio",
+        "tags": [
+          "●"
+        ]
+      },
+      {
+        "name": "Flaming Beaver",
+        "tags": []
+      },
+      {
+        "name": "Joel Gott Wines",
+        "tags": [
+          "●"
+        ]
+      },
+      {
+        "name": "Mead (Blackberry Tart, Cottage, Forest Fruit)",
+        "tags": [
+          "●"
+        ]
+      },
+      {
+        "name": "Mimosa",
+        "tags": [
+          "●"
+        ]
+      },
+      {
+        "name": "Norse Crush Mocktail",
+        "tags": [
+          "●",
+          "■",
+          "▲"
+        ]
+      },
+      {
+        "name": "Nutrl Seltzers",
+        "tags": [
+          "●"
+        ]
+      },
+      {
+        "name": "Pixie Paloma Margarita",
+        "tags": []
+      },
+      {
+        "name": "Red Bull",
+        "tags": [
+          "●"
+        ]
+      },
+      {
+        "name": "Ritual G&T / Spritz Mocktails",
+        "tags": [
+          "●",
+          "■",
+          "▲"
+        ]
+      },
+      {
+        "name": "Royal Refresher Gin Fizz",
+        "tags": []
+      },
+      {
+        "name": "Woodchuck Cider",
+        "tags": [
+          "●"
+        ]
+      }
     ],
     "userNotes": [],
     "userRating": null,
@@ -168,19 +529,75 @@
     "categoryLabel": "Area 3 - Treetop Round",
     "icon": "🥙",
     "name": "Treetop Mediterranean & Dips",
-    "x": 890,
-    "y": 475,
+    "x": 839,
+    "y": 468,
     "items": [
-      { "name": "Spinach & Artichoke Dip in a Bread Bowl", "tags": ["■"] },
-      { "name": "Chickpea Bowl", "tags": ["●", "■", "▲"] },
-      { "name": "Hummus & Veggies", "tags": ["●", "■", "▲"] },
-      { "name": "Vegan Meatball Sub", "tags": ["●", "■", "▲"] },
-      { "name": "Vegan Smart Dog", "tags": ["●", "■", "▲"] },
-      { "name": "Vegan Wrap", "tags": ["●", "■", "▲"] },
-      { "name": "Beignets", "tags": ["■"] },
-      { "name": "Crepes", "tags": ["■"] },
-      { "name": "Cuban Sandwich", "tags": [] },
-      { "name": "Curry", "tags": [] }
+      {
+        "name": "Spinach & Artichoke Dip in a Bread Bowl",
+        "tags": [
+          "■"
+        ]
+      },
+      {
+        "name": "Chickpea Bowl",
+        "tags": [
+          "●",
+          "■",
+          "▲"
+        ]
+      },
+      {
+        "name": "Hummus & Veggies",
+        "tags": [
+          "●",
+          "■",
+          "▲"
+        ]
+      },
+      {
+        "name": "Vegan Meatball Sub",
+        "tags": [
+          "●",
+          "■",
+          "▲"
+        ]
+      },
+      {
+        "name": "Vegan Smart Dog",
+        "tags": [
+          "●",
+          "■",
+          "▲"
+        ]
+      },
+      {
+        "name": "Vegan Wrap",
+        "tags": [
+          "●",
+          "■",
+          "▲"
+        ]
+      },
+      {
+        "name": "Beignets",
+        "tags": [
+          "■"
+        ]
+      },
+      {
+        "name": "Crepes",
+        "tags": [
+          "■"
+        ]
+      },
+      {
+        "name": "Cuban Sandwich",
+        "tags": []
+      },
+      {
+        "name": "Curry",
+        "tags": []
+      }
     ],
     "userNotes": [],
     "userRating": null,
@@ -192,24 +609,88 @@
     "categoryLabel": "Area 3 - Treetop Round",
     "icon": "🥩",
     "name": "Treetop British Pub & Comfort Eats",
-    "x": 865,
-    "y": 498,
+    "x": 835,
+    "y": 488,
     "items": [
-      { "name": "Banger & Mash", "tags": [] },
-      { "name": "Cabbage Rolls", "tags": [] },
-      { "name": "Jamaican Beef Pastry", "tags": [] },
-      { "name": "Mini Donuts / Strawberries & Cream Mini Donuts", "tags": ["■"] },
-      { "name": "Mini Pancakes", "tags": ["■"] },
-      { "name": "Nordic Meatballs with Lingonberries", "tags": [] },
-      { "name": "Pierogi", "tags": [] },
-      { "name": "Plantains on a Stick", "tags": ["●", "■", "▲"] },
-      { "name": "Poppy Seed Rolls", "tags": ["■"] },
-      { "name": "Potato Pancakes", "tags": ["■"] },
-      { "name": "Pretzel", "tags": ["■"] },
-      { "name": "Roasted Red Pepper & Gouda Bisque", "tags": ["■"] },
-      { "name": "Scotch Eggs", "tags": [] },
-      { "name": "Soup Bread Bowl", "tags": [] },
-      { "name": "Tater Tots", "tags": ["●", "■"] }
+      {
+        "name": "Banger & Mash",
+        "tags": []
+      },
+      {
+        "name": "Cabbage Rolls",
+        "tags": []
+      },
+      {
+        "name": "Jamaican Beef Pastry",
+        "tags": []
+      },
+      {
+        "name": "Mini Donuts / Strawberries & Cream Mini Donuts",
+        "tags": [
+          "■"
+        ]
+      },
+      {
+        "name": "Mini Pancakes",
+        "tags": [
+          "■"
+        ]
+      },
+      {
+        "name": "Nordic Meatballs with Lingonberries",
+        "tags": []
+      },
+      {
+        "name": "Pierogi",
+        "tags": []
+      },
+      {
+        "name": "Plantains on a Stick",
+        "tags": [
+          "●",
+          "■",
+          "▲"
+        ]
+      },
+      {
+        "name": "Poppy Seed Rolls",
+        "tags": [
+          "■"
+        ]
+      },
+      {
+        "name": "Potato Pancakes",
+        "tags": [
+          "■"
+        ]
+      },
+      {
+        "name": "Pretzel",
+        "tags": [
+          "■"
+        ]
+      },
+      {
+        "name": "Roasted Red Pepper & Gouda Bisque",
+        "tags": [
+          "■"
+        ]
+      },
+      {
+        "name": "Scotch Eggs",
+        "tags": []
+      },
+      {
+        "name": "Soup Bread Bowl",
+        "tags": []
+      },
+      {
+        "name": "Tater Tots",
+        "tags": [
+          "●",
+          "■"
+        ]
+      }
     ],
     "userNotes": [],
     "userRating": null,
@@ -221,19 +702,74 @@
     "categoryLabel": "Area 3 - Treetop Round",
     "icon": "🍷",
     "name": "Ale House of the Dragon & Mead",
-    "x": 840,
-    "y": 520,
+    "x": 938,
+    "y": 510,
     "items": [
-      { "name": "Apple Cider Floats & Apple Tarts", "tags": ["■"] },
-      { "name": "Bacon", "tags": ["●"] },
-      { "name": "Fre Mimosa Mocktail", "tags": ["●", "■", "▲"] },
-      { "name": "Mead (Blackberry Tart, Forest Fruit)", "tags": ["●"] },
-      { "name": "Menage A Trois Wine", "tags": ["●"] },
-      { "name": "Mimosa", "tags": ["●"] },
-      { "name": "Red Bull", "tags": ["●"] },
-      { "name": "Seaglass Wines", "tags": ["●"] },
-      { "name": "Smoothies", "tags": ["●", "■"] },
-      { "name": "Spun Sugar", "tags": ["●", "■", "▲"] }
+      {
+        "name": "Apple Cider Floats & Apple Tarts",
+        "tags": [
+          "■"
+        ]
+      },
+      {
+        "name": "Bacon",
+        "tags": [
+          "●"
+        ]
+      },
+      {
+        "name": "Fre Mimosa Mocktail",
+        "tags": [
+          "●",
+          "■",
+          "▲"
+        ]
+      },
+      {
+        "name": "Mead (Blackberry Tart, Forest Fruit)",
+        "tags": [
+          "●"
+        ]
+      },
+      {
+        "name": "Menage A Trois Wine",
+        "tags": [
+          "●"
+        ]
+      },
+      {
+        "name": "Mimosa",
+        "tags": [
+          "●"
+        ]
+      },
+      {
+        "name": "Red Bull",
+        "tags": [
+          "●"
+        ]
+      },
+      {
+        "name": "Seaglass Wines",
+        "tags": [
+          "●"
+        ]
+      },
+      {
+        "name": "Smoothies",
+        "tags": [
+          "●",
+          "■"
+        ]
+      },
+      {
+        "name": "Spun Sugar",
+        "tags": [
+          "●",
+          "■",
+          "▲"
+        ]
+      }
     ],
     "userNotes": [],
     "userRating": null,
@@ -245,13 +781,32 @@
     "categoryLabel": "Area 4 - Marketplace",
     "icon": "🍞",
     "name": "Bad Manor Bakery & Soups",
-    "x": 1180,
-    "y": 710,
+    "x": 1056,
+    "y": 688,
     "items": [
-      { "name": "Chocolates", "tags": ["■"] },
-      { "name": "Nonna's Tipsy Tortes", "tags": ["■"] },
-      { "name": "Garlic Festival Foods", "tags": [] },
-      { "name": "The Honey Hut Sweets", "tags": ["●", "■"] }
+      {
+        "name": "Chocolates",
+        "tags": [
+          "■"
+        ]
+      },
+      {
+        "name": "Nonna's Tipsy Tortes",
+        "tags": [
+          "■"
+        ]
+      },
+      {
+        "name": "Garlic Festival Foods",
+        "tags": []
+      },
+      {
+        "name": "The Honey Hut Sweets",
+        "tags": [
+          "●",
+          "■"
+        ]
+      }
     ],
     "userNotes": [],
     "userRating": null,
@@ -263,12 +818,25 @@
     "categoryLabel": "Area 4 - Marketplace",
     "icon": "🍺",
     "name": "Monks Craft Beer Pub",
-    "x": 1160,
-    "y": 730,
+    "x": 1529,
+    "y": 492,
     "items": [
-      { "name": "Craft Beers (Surly, Summit EPA, Mango Cart, Elysian)", "tags": [] },
-      { "name": "Woodchuck Hard Cider", "tags": ["●"] },
-      { "name": "Mead Flights", "tags": ["●"] }
+      {
+        "name": "Craft Beers (Surly, Summit EPA, Mango Cart, Elysian)",
+        "tags": []
+      },
+      {
+        "name": "Woodchuck Hard Cider",
+        "tags": [
+          "●"
+        ]
+      },
+      {
+        "name": "Mead Flights",
+        "tags": [
+          "●"
+        ]
+      }
     ],
     "userNotes": [],
     "userRating": null,
@@ -280,36 +848,166 @@
     "categoryLabel": "Area 5 - Folkstone Well",
     "icon": "🍔",
     "name": "Folkstone Well Comfort & Street Eats",
-    "x": 1715,
-    "y": 750,
+    "x": 1834,
+    "y": 711,
     "items": [
-      { "name": "Spinach & Artichoke Dip in a Bread Bowl", "tags": ["■"] },
-      { "name": "Bacon Cheeseburger", "tags": [] },
-      { "name": "Battered Spicy Cauliflower", "tags": ["●", "■"] },
-      { "name": "Birria Philly / Philly Cheese Steak", "tags": [] },
-      { "name": "Burger / Cheeseburger", "tags": [] },
-      { "name": "Burrito Bowl & Burritos", "tags": [] },
-      { "name": "Carrot Fries", "tags": ["●", "■", "▲"] },
-      { "name": "Chips & Cheese", "tags": ["■"] },
-      { "name": "Corn, Mexican Street / Roasted Corn", "tags": ["●", "■"] },
-      { "name": "Deep Fried Pickle / Loaded Fried Pickles", "tags": ["■"] },
-      { "name": "Dumplings", "tags": [] },
-      { "name": "Elote Street Corn Poppers", "tags": ["■"] },
-      { "name": "Falafel", "tags": ["●", "■", "▲"] },
-      { "name": "Ice Cream / Scoop Ice Cream", "tags": ["■"] },
-      { "name": "Mango on a Stick", "tags": ["●", "■", "▲"] },
-      { "name": "Nordic Meatballs", "tags": [] },
-      { "name": "Onion Rings", "tags": ["■"] },
-      { "name": "Philly Cheese Chicken", "tags": [] },
-      { "name": "Pineapple on a Stick", "tags": ["●", "■", "▲"] },
-      { "name": "Quesadillas", "tags": ["■"] },
-      { "name": "Roasted Red Pepper & Gouda Bisque in a Bread Bowl", "tags": ["■"] },
-      { "name": "Smoothies", "tags": ["●", "■"] },
-      { "name": "Tamales", "tags": [] },
-      { "name": "Tempura Battered Brussel Sprouts", "tags": ["■"] },
-      { "name": "Truffled Mushroom Croquette", "tags": ["■"] },
-      { "name": "Turkey Burger", "tags": [] },
-      { "name": "Waffle Fries", "tags": ["●", "■", "▲"] }
+      {
+        "name": "Spinach & Artichoke Dip in a Bread Bowl",
+        "tags": [
+          "■"
+        ]
+      },
+      {
+        "name": "Bacon Cheeseburger",
+        "tags": []
+      },
+      {
+        "name": "Battered Spicy Cauliflower",
+        "tags": [
+          "●",
+          "■"
+        ]
+      },
+      {
+        "name": "Birria Philly / Philly Cheese Steak",
+        "tags": []
+      },
+      {
+        "name": "Burger / Cheeseburger",
+        "tags": []
+      },
+      {
+        "name": "Burrito Bowl & Burritos",
+        "tags": []
+      },
+      {
+        "name": "Carrot Fries",
+        "tags": [
+          "●",
+          "■",
+          "▲"
+        ]
+      },
+      {
+        "name": "Chips & Cheese",
+        "tags": [
+          "■"
+        ]
+      },
+      {
+        "name": "Corn, Mexican Street / Roasted Corn",
+        "tags": [
+          "●",
+          "■"
+        ]
+      },
+      {
+        "name": "Deep Fried Pickle / Loaded Fried Pickles",
+        "tags": [
+          "■"
+        ]
+      },
+      {
+        "name": "Dumplings",
+        "tags": []
+      },
+      {
+        "name": "Elote Street Corn Poppers",
+        "tags": [
+          "■"
+        ]
+      },
+      {
+        "name": "Falafel",
+        "tags": [
+          "●",
+          "■",
+          "▲"
+        ]
+      },
+      {
+        "name": "Ice Cream / Scoop Ice Cream",
+        "tags": [
+          "■"
+        ]
+      },
+      {
+        "name": "Mango on a Stick",
+        "tags": [
+          "●",
+          "■",
+          "▲"
+        ]
+      },
+      {
+        "name": "Nordic Meatballs",
+        "tags": []
+      },
+      {
+        "name": "Onion Rings",
+        "tags": [
+          "■"
+        ]
+      },
+      {
+        "name": "Philly Cheese Chicken",
+        "tags": []
+      },
+      {
+        "name": "Pineapple on a Stick",
+        "tags": [
+          "●",
+          "■",
+          "▲"
+        ]
+      },
+      {
+        "name": "Quesadillas",
+        "tags": [
+          "■"
+        ]
+      },
+      {
+        "name": "Roasted Red Pepper & Gouda Bisque in a Bread Bowl",
+        "tags": [
+          "■"
+        ]
+      },
+      {
+        "name": "Smoothies",
+        "tags": [
+          "●",
+          "■"
+        ]
+      },
+      {
+        "name": "Tamales",
+        "tags": []
+      },
+      {
+        "name": "Tempura Battered Brussel Sprouts",
+        "tags": [
+          "■"
+        ]
+      },
+      {
+        "name": "Truffled Mushroom Croquette",
+        "tags": [
+          "■"
+        ]
+      },
+      {
+        "name": "Turkey Burger",
+        "tags": []
+      },
+      {
+        "name": "Waffle Fries",
+        "tags": [
+          "●",
+          "■",
+          "▲"
+        ]
+      }
     ],
     "userNotes": [],
     "userRating": null,
@@ -321,26 +1019,105 @@
     "categoryLabel": "Area 5 - Folkstone Well",
     "icon": "🍷",
     "name": "Folkstone Pub & Watering Hole",
-    "x": 1741,
-    "y": 730,
+    "x": 1742,
+    "y": 583,
     "items": [
-      { "name": "Avissi Prosecco", "tags": ["●"] },
-      { "name": "Beer (Full Craft Selection)", "tags": [] },
-      { "name": "Craft Cocktails", "tags": [] },
-      { "name": "Flaming Beaver", "tags": [] },
-      { "name": "Lemonade", "tags": ["●", "■", "▲"] },
-      { "name": "Mango El Jimador Tequila Spritz", "tags": [] },
-      { "name": "Mead (Blackberry, Cottage, Forest Fruit)", "tags": ["●"] },
-      { "name": "Menage A Trois Wines", "tags": ["●"] },
-      { "name": "Norse Crush Mocktail", "tags": ["●", "■", "▲"] },
-      { "name": "Nutrl Seltzers", "tags": ["●"] },
-      { "name": "Pixie Paloma Margarita", "tags": [] },
-      { "name": "Red Bull", "tags": ["●"] },
-      { "name": "Ritual G&T / Spritz Mocktails", "tags": ["●", "■", "▲"] },
-      { "name": "Royal Refresher Gin Fizz", "tags": [] },
-      { "name": "Seaglass Wines", "tags": ["●"] },
-      { "name": "Sutter Home White Zinfandel", "tags": ["●"] },
-      { "name": "Woodchuck Cider", "tags": ["●"] }
+      {
+        "name": "Avissi Prosecco",
+        "tags": [
+          "●"
+        ]
+      },
+      {
+        "name": "Beer (Full Craft Selection)",
+        "tags": []
+      },
+      {
+        "name": "Craft Cocktails",
+        "tags": []
+      },
+      {
+        "name": "Flaming Beaver",
+        "tags": []
+      },
+      {
+        "name": "Lemonade",
+        "tags": [
+          "●",
+          "■",
+          "▲"
+        ]
+      },
+      {
+        "name": "Mango El Jimador Tequila Spritz",
+        "tags": []
+      },
+      {
+        "name": "Mead (Blackberry, Cottage, Forest Fruit)",
+        "tags": [
+          "●"
+        ]
+      },
+      {
+        "name": "Menage A Trois Wines",
+        "tags": [
+          "●"
+        ]
+      },
+      {
+        "name": "Norse Crush Mocktail",
+        "tags": [
+          "●",
+          "■",
+          "▲"
+        ]
+      },
+      {
+        "name": "Nutrl Seltzers",
+        "tags": [
+          "●"
+        ]
+      },
+      {
+        "name": "Pixie Paloma Margarita",
+        "tags": []
+      },
+      {
+        "name": "Red Bull",
+        "tags": [
+          "●"
+        ]
+      },
+      {
+        "name": "Ritual G&T / Spritz Mocktails",
+        "tags": [
+          "●",
+          "■",
+          "▲"
+        ]
+      },
+      {
+        "name": "Royal Refresher Gin Fizz",
+        "tags": []
+      },
+      {
+        "name": "Seaglass Wines",
+        "tags": [
+          "●"
+        ]
+      },
+      {
+        "name": "Sutter Home White Zinfandel",
+        "tags": [
+          "●"
+        ]
+      },
+      {
+        "name": "Woodchuck Cider",
+        "tags": [
+          "●"
+        ]
+      }
     ],
     "userNotes": [],
     "userRating": null,
@@ -352,38 +1129,147 @@
     "categoryLabel": "Area 6 - Upson Downs",
     "icon": "🍗",
     "name": "Upson Downs King's Feast & Meats",
-    "x": 1310,
-    "y": 790,
+    "x": 1268,
+    "y": 665,
     "items": [
-      { "name": "Spinach & Artichoke Dip in a Bread Bowl", "tags": ["■"] },
-      { "name": "Bacon Jam Burger", "tags": [] },
-      { "name": "BBQ Turkey Burger", "tags": [] },
-      { "name": "Black Bean Burger", "tags": ["●", "■", "▲"] },
-      { "name": "BLT Sandwich", "tags": [] },
-      { "name": "Bratwurst", "tags": [] },
-      { "name": "Burger / Cheeseburger", "tags": [] },
-      { "name": "Chicken & Chips", "tags": [] },
-      { "name": "Chicken Sandwich", "tags": [] },
-      { "name": "Chicken Wings / Jumbo Smoked Chicken Wings", "tags": [] },
-      { "name": "Cream Cheese Wontons", "tags": ["■"] },
-      { "name": "Curly Fries", "tags": ["●", "■", "▲"] },
-      { "name": "Deep Fried Pickle / Fried Pickle Bombs", "tags": ["■"] },
-      { "name": "Deep Fried Ravioli", "tags": ["■"] },
-      { "name": "Grilled Cheese / Skewer", "tags": ["■"] },
-      { "name": "Gyros", "tags": [] },
-      { "name": "Korean BBQ Spring Roll", "tags": [] },
-      { "name": "Mac & Cheese", "tags": ["■"] },
-      { "name": "Nordic Meatballs", "tags": [] },
-      { "name": "Pad Thai", "tags": [] },
-      { "name": "Penne / Spaghetti / Pasta Bar", "tags": [] },
-      { "name": "Pho", "tags": [] },
-      { "name": "Pickle Brined Chicken Tenders", "tags": [] },
-      { "name": "Pizza", "tags": [] },
-      { "name": "Pork Chop on a Stick", "tags": ["●"] },
-      { "name": "Racheal Sandwich / Reuben Sandwich", "tags": [] },
-      { "name": "Salted Maple Waffle Burger", "tags": [] },
-      { "name": "Shepherd's Pie", "tags": [] },
-      { "name": "Steak on a Stake / Steak Sandwich", "tags": [] }
+      {
+        "name": "Spinach & Artichoke Dip in a Bread Bowl",
+        "tags": [
+          "■"
+        ]
+      },
+      {
+        "name": "Bacon Jam Burger",
+        "tags": []
+      },
+      {
+        "name": "BBQ Turkey Burger",
+        "tags": []
+      },
+      {
+        "name": "Black Bean Burger",
+        "tags": [
+          "●",
+          "■",
+          "▲"
+        ]
+      },
+      {
+        "name": "BLT Sandwich",
+        "tags": []
+      },
+      {
+        "name": "Bratwurst",
+        "tags": []
+      },
+      {
+        "name": "Burger / Cheeseburger",
+        "tags": []
+      },
+      {
+        "name": "Chicken & Chips",
+        "tags": []
+      },
+      {
+        "name": "Chicken Sandwich",
+        "tags": []
+      },
+      {
+        "name": "Chicken Wings / Jumbo Smoked Chicken Wings",
+        "tags": []
+      },
+      {
+        "name": "Cream Cheese Wontons",
+        "tags": [
+          "■"
+        ]
+      },
+      {
+        "name": "Curly Fries",
+        "tags": [
+          "●",
+          "■",
+          "▲"
+        ]
+      },
+      {
+        "name": "Deep Fried Pickle / Fried Pickle Bombs",
+        "tags": [
+          "■"
+        ]
+      },
+      {
+        "name": "Deep Fried Ravioli",
+        "tags": [
+          "■"
+        ]
+      },
+      {
+        "name": "Grilled Cheese / Skewer",
+        "tags": [
+          "■"
+        ]
+      },
+      {
+        "name": "Gyros",
+        "tags": []
+      },
+      {
+        "name": "Korean BBQ Spring Roll",
+        "tags": []
+      },
+      {
+        "name": "Mac & Cheese",
+        "tags": [
+          "■"
+        ]
+      },
+      {
+        "name": "Nordic Meatballs",
+        "tags": []
+      },
+      {
+        "name": "Pad Thai",
+        "tags": []
+      },
+      {
+        "name": "Penne / Spaghetti / Pasta Bar",
+        "tags": []
+      },
+      {
+        "name": "Pho",
+        "tags": []
+      },
+      {
+        "name": "Pickle Brined Chicken Tenders",
+        "tags": []
+      },
+      {
+        "name": "Pizza",
+        "tags": []
+      },
+      {
+        "name": "Pork Chop on a Stick",
+        "tags": [
+          "●"
+        ]
+      },
+      {
+        "name": "Racheal Sandwich / Reuben Sandwich",
+        "tags": []
+      },
+      {
+        "name": "Salted Maple Waffle Burger",
+        "tags": []
+      },
+      {
+        "name": "Shepherd's Pie",
+        "tags": []
+      },
+      {
+        "name": "Steak on a Stake / Steak Sandwich",
+        "tags": []
+      }
     ],
     "userNotes": [],
     "userRating": null,
@@ -395,15 +1281,47 @@
     "categoryLabel": "Area 6 - Upson Downs",
     "icon": "🥐",
     "name": "Upson Breads & Sweet Treats",
-    "x": 1350,
-    "y": 800,
+    "x": 1101,
+    "y": 746,
     "items": [
-      { "name": "Banana Bread", "tags": ["■"] },
-      { "name": "Bubble Lemonade", "tags": ["●", "■", "▲"] },
-      { "name": "Coffee Cinnamon Bread", "tags": ["■"] },
-      { "name": "Lemon Icing Bread", "tags": ["■"] },
-      { "name": "Mini Donuts / Strawberries & Cream Mini Donuts", "tags": ["■"] },
-      { "name": "Pumpkin Bread", "tags": ["■"] }
+      {
+        "name": "Banana Bread",
+        "tags": [
+          "■"
+        ]
+      },
+      {
+        "name": "Bubble Lemonade",
+        "tags": [
+          "●",
+          "■",
+          "▲"
+        ]
+      },
+      {
+        "name": "Coffee Cinnamon Bread",
+        "tags": [
+          "■"
+        ]
+      },
+      {
+        "name": "Lemon Icing Bread",
+        "tags": [
+          "■"
+        ]
+      },
+      {
+        "name": "Mini Donuts / Strawberries & Cream Mini Donuts",
+        "tags": [
+          "■"
+        ]
+      },
+      {
+        "name": "Pumpkin Bread",
+        "tags": [
+          "■"
+        ]
+      }
     ],
     "userNotes": [],
     "userRating": null,
@@ -415,25 +1333,97 @@
     "categoryLabel": "Area 6 - Upson Downs",
     "icon": "🍺",
     "name": "Mac's Pub & Queen's Pub",
-    "x": 1380,
-    "y": 780,
+    "x": 1463,
+    "y": 741,
     "items": [
-      { "name": "Avissi Prosecco", "tags": ["●"] },
-      { "name": "Beer (Full Craft & Domestic Draft Selection)", "tags": [] },
-      { "name": "Craft Cocktails", "tags": [] },
-      { "name": "Flaming Beaver", "tags": [] },
-      { "name": "Mango El Jimador Tequila Spritz", "tags": [] },
-      { "name": "Mead (Blackberry, Cottage, Forest Fruit)", "tags": ["●"] },
-      { "name": "Menage A Trois Wine", "tags": ["●"] },
-      { "name": "Norse Crush Mocktail", "tags": ["●", "■", "▲"] },
-      { "name": "Nutrl Seltzers", "tags": ["●"] },
-      { "name": "Pixie Paloma Margarita", "tags": [] },
-      { "name": "Red Bull", "tags": ["●"] },
-      { "name": "Ritual G&T / Spritz Mocktails", "tags": ["●", "■", "▲"] },
-      { "name": "Royal Refresher Gin Fizz", "tags": [] },
-      { "name": "Seaglass Wines", "tags": ["●"] },
-      { "name": "Sutter Home White Zinfandel", "tags": ["●"] },
-      { "name": "Woodchuck Cider", "tags": ["●"] }
+      {
+        "name": "Avissi Prosecco",
+        "tags": [
+          "●"
+        ]
+      },
+      {
+        "name": "Beer (Full Craft & Domestic Draft Selection)",
+        "tags": []
+      },
+      {
+        "name": "Craft Cocktails",
+        "tags": []
+      },
+      {
+        "name": "Flaming Beaver",
+        "tags": []
+      },
+      {
+        "name": "Mango El Jimador Tequila Spritz",
+        "tags": []
+      },
+      {
+        "name": "Mead (Blackberry, Cottage, Forest Fruit)",
+        "tags": [
+          "●"
+        ]
+      },
+      {
+        "name": "Menage A Trois Wine",
+        "tags": [
+          "●"
+        ]
+      },
+      {
+        "name": "Norse Crush Mocktail",
+        "tags": [
+          "●",
+          "■",
+          "▲"
+        ]
+      },
+      {
+        "name": "Nutrl Seltzers",
+        "tags": [
+          "●"
+        ]
+      },
+      {
+        "name": "Pixie Paloma Margarita",
+        "tags": []
+      },
+      {
+        "name": "Red Bull",
+        "tags": [
+          "●"
+        ]
+      },
+      {
+        "name": "Ritual G&T / Spritz Mocktails",
+        "tags": [
+          "●",
+          "■",
+          "▲"
+        ]
+      },
+      {
+        "name": "Royal Refresher Gin Fizz",
+        "tags": []
+      },
+      {
+        "name": "Seaglass Wines",
+        "tags": [
+          "●"
+        ]
+      },
+      {
+        "name": "Sutter Home White Zinfandel",
+        "tags": [
+          "●"
+        ]
+      },
+      {
+        "name": "Woodchuck Cider",
+        "tags": [
+          "●"
+        ]
+      }
     ],
     "userNotes": [],
     "userRating": null,
@@ -445,28 +1435,106 @@
     "categoryLabel": "Area 7 - Narrow Market",
     "icon": "🥟",
     "name": "Narrow Market Asian & Specialty Fare",
-    "x": 1420,
-    "y": 660,
+    "x": 1195,
+    "y": 569,
     "items": [
-      { "name": "Beef Stick / Jerky", "tags": [] },
-      { "name": "Bubble Tea", "tags": ["■"] },
-      { "name": "Cheesecake", "tags": ["■"] },
-      { "name": "Cheese Curds", "tags": ["■"] },
-      { "name": "Chicken Wings", "tags": [] },
-      { "name": "Cream Cheese Wontons", "tags": ["■"] },
-      { "name": "Curry", "tags": [] },
-      { "name": "Deep Fried Pork Ribs", "tags": [] },
-      { "name": "Dumplings", "tags": [] },
-      { "name": "Egg Rolls / Spring Rolls", "tags": [] },
-      { "name": "Fried Rice", "tags": ["●", "■", "▲"] },
-      { "name": "Hushpuppies", "tags": ["■"] },
-      { "name": "Nut Roll / Penuche Pecan Roll", "tags": ["●", "■"] },
-      { "name": "Pad Thai / Thai Noodles", "tags": [] },
-      { "name": "Popover", "tags": ["■"] },
-      { "name": "Pork Belly Burnt Ends", "tags": [] },
-      { "name": "Pretzel", "tags": ["■"] },
-      { "name": "Pulled Pork / Pulled Pork Sandwich", "tags": [] },
-      { "name": "Steamed Pork Buns", "tags": [] }
+      {
+        "name": "Beef Stick / Jerky",
+        "tags": []
+      },
+      {
+        "name": "Bubble Tea",
+        "tags": [
+          "■"
+        ]
+      },
+      {
+        "name": "Cheesecake",
+        "tags": [
+          "■"
+        ]
+      },
+      {
+        "name": "Cheese Curds",
+        "tags": [
+          "■"
+        ]
+      },
+      {
+        "name": "Chicken Wings",
+        "tags": []
+      },
+      {
+        "name": "Cream Cheese Wontons",
+        "tags": [
+          "■"
+        ]
+      },
+      {
+        "name": "Curry",
+        "tags": []
+      },
+      {
+        "name": "Deep Fried Pork Ribs",
+        "tags": []
+      },
+      {
+        "name": "Dumplings",
+        "tags": []
+      },
+      {
+        "name": "Egg Rolls / Spring Rolls",
+        "tags": []
+      },
+      {
+        "name": "Fried Rice",
+        "tags": [
+          "●",
+          "■",
+          "▲"
+        ]
+      },
+      {
+        "name": "Hushpuppies",
+        "tags": [
+          "■"
+        ]
+      },
+      {
+        "name": "Nut Roll / Penuche Pecan Roll",
+        "tags": [
+          "●",
+          "■"
+        ]
+      },
+      {
+        "name": "Pad Thai / Thai Noodles",
+        "tags": []
+      },
+      {
+        "name": "Popover",
+        "tags": [
+          "■"
+        ]
+      },
+      {
+        "name": "Pork Belly Burnt Ends",
+        "tags": []
+      },
+      {
+        "name": "Pretzel",
+        "tags": [
+          "■"
+        ]
+      },
+      {
+        "name": "Pulled Pork / Pulled Pork Sandwich",
+        "tags": []
+      },
+      {
+        "name": "Steamed Pork Buns",
+        "tags": []
+      }
     ],
     "userNotes": [],
     "userRating": null,
@@ -481,22 +1549,94 @@
     "x": 1460,
     "y": 670,
     "items": [
-      { "name": "Avissi Prosecco", "tags": ["●"] },
-      { "name": "Beer (Selection of Premium Drafts)", "tags": [] },
-      { "name": "Craft Cocktails", "tags": [] },
-      { "name": "Flaming Beaver", "tags": [] },
-      { "name": "Mango El Jimador Tequila Spritz", "tags": [] },
-      { "name": "Mead (Blackberry, Cottage, Forest Fruit)", "tags": ["●"] },
-      { "name": "Menage A Trois Wines", "tags": ["●"] },
-      { "name": "Norse Crush Mocktail", "tags": ["●", "■", "▲"] },
-      { "name": "Nutrl Seltzers", "tags": ["●"] },
-      { "name": "Pixie Paloma Margarita", "tags": [] },
-      { "name": "Red Bull", "tags": ["●"] },
-      { "name": "Ritual G&T / Spritz Mocktails", "tags": ["●", "■", "▲"] },
-      { "name": "Royal Refresher Gin Fizz", "tags": [] },
-      { "name": "Seaglass Wines", "tags": ["●"] },
-      { "name": "Sutter Home White Zinfandel", "tags": ["●"] },
-      { "name": "Woodchuck Cider", "tags": ["●"] }
+      {
+        "name": "Avissi Prosecco",
+        "tags": [
+          "●"
+        ]
+      },
+      {
+        "name": "Beer (Selection of Premium Drafts)",
+        "tags": []
+      },
+      {
+        "name": "Craft Cocktails",
+        "tags": []
+      },
+      {
+        "name": "Flaming Beaver",
+        "tags": []
+      },
+      {
+        "name": "Mango El Jimador Tequila Spritz",
+        "tags": []
+      },
+      {
+        "name": "Mead (Blackberry, Cottage, Forest Fruit)",
+        "tags": [
+          "●"
+        ]
+      },
+      {
+        "name": "Menage A Trois Wines",
+        "tags": [
+          "●"
+        ]
+      },
+      {
+        "name": "Norse Crush Mocktail",
+        "tags": [
+          "●",
+          "■",
+          "▲"
+        ]
+      },
+      {
+        "name": "Nutrl Seltzers",
+        "tags": [
+          "●"
+        ]
+      },
+      {
+        "name": "Pixie Paloma Margarita",
+        "tags": []
+      },
+      {
+        "name": "Red Bull",
+        "tags": [
+          "●"
+        ]
+      },
+      {
+        "name": "Ritual G&T / Spritz Mocktails",
+        "tags": [
+          "●",
+          "■",
+          "▲"
+        ]
+      },
+      {
+        "name": "Royal Refresher Gin Fizz",
+        "tags": []
+      },
+      {
+        "name": "Seaglass Wines",
+        "tags": [
+          "●"
+        ]
+      },
+      {
+        "name": "Sutter Home White Zinfandel",
+        "tags": [
+          "●"
+        ]
+      },
+      {
+        "name": "Woodchuck Cider",
+        "tags": [
+          "●"
+        ]
+      }
     ],
     "userNotes": [],
     "userRating": null,
@@ -508,22 +1648,74 @@
     "categoryLabel": "Area 8 - Cartwheel Cove",
     "icon": "🍕",
     "name": "Pickle Pizza & Cove Specialty Eats",
-    "x": 671,
-    "y": 395,
+    "x": 531,
+    "y": 335,
     "items": [
-      { "name": "Pickle Pizza", "tags": ["■"] },
-      { "name": "Chicken & Waffle", "tags": [] },
-      { "name": "Deep Fried Sushi on a Stick", "tags": ["■"] },
-      { "name": "Fried Shrimp Basket / Po Boy", "tags": [] },
-      { "name": "Funnel Fries", "tags": ["■"] },
-      { "name": "Korean BBQ Pork Wings", "tags": [] },
-      { "name": "Root Beer Float", "tags": ["●", "■"] },
-      { "name": "Salad", "tags": ["●", "■", "▲"] },
-      { "name": "Sushi", "tags": [] },
-      { "name": "Wagyu Burger", "tags": [] },
-      { "name": "Walleye Bites", "tags": [] },
-      { "name": "Wontons", "tags": [] },
-      { "name": "Wraps", "tags": [] }
+      {
+        "name": "Pickle Pizza",
+        "tags": [
+          "■"
+        ]
+      },
+      {
+        "name": "Chicken & Waffle",
+        "tags": []
+      },
+      {
+        "name": "Deep Fried Sushi on a Stick",
+        "tags": [
+          "■"
+        ]
+      },
+      {
+        "name": "Fried Shrimp Basket / Po Boy",
+        "tags": []
+      },
+      {
+        "name": "Funnel Fries",
+        "tags": [
+          "■"
+        ]
+      },
+      {
+        "name": "Korean BBQ Pork Wings",
+        "tags": []
+      },
+      {
+        "name": "Root Beer Float",
+        "tags": [
+          "●",
+          "■"
+        ]
+      },
+      {
+        "name": "Salad",
+        "tags": [
+          "●",
+          "■",
+          "▲"
+        ]
+      },
+      {
+        "name": "Sushi",
+        "tags": []
+      },
+      {
+        "name": "Wagyu Burger",
+        "tags": []
+      },
+      {
+        "name": "Walleye Bites",
+        "tags": []
+      },
+      {
+        "name": "Wontons",
+        "tags": []
+      },
+      {
+        "name": "Wraps",
+        "tags": []
+      }
     ],
     "userNotes": [],
     "userRating": null,
@@ -535,17 +1727,55 @@
     "categoryLabel": "Area 8 - Cartwheel Cove",
     "icon": "🍳",
     "name": "Cove Breakfast & Snack Stand",
-    "x": 690,
-    "y": 420,
+    "x": 596,
+    "y": 439,
     "items": [
-      { "name": "Cheesy Breadsticks", "tags": ["■"] },
-      { "name": "Corn, Mexican Street / Roasted Corn", "tags": ["●", "■"] },
-      { "name": "Corn Dog", "tags": [] },
-      { "name": "Egg Bowl / Egg Sandwich / Egg, Sausage & Cheese Sandwich", "tags": [] },
-      { "name": "Hot Dog", "tags": [] },
-      { "name": "Ice Cream / Scoop Ice Cream", "tags": ["■"] },
-      { "name": "Nut Roll / Penuche Pecan Roll", "tags": ["●", "■"] },
-      { "name": "Pickles", "tags": ["●", "■", "▲"] }
+      {
+        "name": "Cheesy Breadsticks",
+        "tags": [
+          "■"
+        ]
+      },
+      {
+        "name": "Corn, Mexican Street / Roasted Corn",
+        "tags": [
+          "●",
+          "■"
+        ]
+      },
+      {
+        "name": "Corn Dog",
+        "tags": []
+      },
+      {
+        "name": "Egg Bowl / Egg Sandwich / Egg, Sausage & Cheese Sandwich",
+        "tags": []
+      },
+      {
+        "name": "Hot Dog",
+        "tags": []
+      },
+      {
+        "name": "Ice Cream / Scoop Ice Cream",
+        "tags": [
+          "■"
+        ]
+      },
+      {
+        "name": "Nut Roll / Penuche Pecan Roll",
+        "tags": [
+          "●",
+          "■"
+        ]
+      },
+      {
+        "name": "Pickles",
+        "tags": [
+          "●",
+          "■",
+          "▲"
+        ]
+      }
     ],
     "userNotes": [],
     "userRating": null,
@@ -557,27 +1787,112 @@
     "categoryLabel": "Area 8 - Cartwheel Cove",
     "icon": "🍺",
     "name": "Queen's Pub & Cove Drinks",
-    "x": 650,
-    "y": 380,
+    "x": 708,
+    "y": 311,
     "items": [
-      { "name": "Avissi Prosecco", "tags": ["●"] },
-      { "name": "Beer (3 Floyds, Surly, Summit, Mango Cart)", "tags": [] },
-      { "name": "Craft Cocktails", "tags": [] },
-      { "name": "Flaming Beaver", "tags": [] },
-      { "name": "Lemonade", "tags": ["●", "■", "▲"] },
-      { "name": "Mango El Jimador Tequila Spritz", "tags": [] },
-      { "name": "Mead (Blackberry, Cottage, Forest Fruit)", "tags": ["●"] },
-      { "name": "Menage A Trois Wine", "tags": ["●"] },
-      { "name": "Norse Crush Mocktail", "tags": ["●", "■", "▲"] },
-      { "name": "Nutrl Seltzers", "tags": ["●"] },
-      { "name": "Pixie Paloma Margarita", "tags": [] },
-      { "name": "Red Bull", "tags": ["●"] },
-      { "name": "Ritual G&T / Spritz Mocktails", "tags": ["●", "■", "▲"] },
-      { "name": "Royal Refresher Gin Fizz", "tags": [] },
-      { "name": "Seaglass Wines", "tags": ["●"] },
-      { "name": "Smoothies", "tags": ["●", "■"] },
-      { "name": "Sutter Home White Zinfandel", "tags": ["●"] },
-      { "name": "Woodchuck Cider", "tags": ["●"] }
+      {
+        "name": "Avissi Prosecco",
+        "tags": [
+          "●"
+        ]
+      },
+      {
+        "name": "Beer (3 Floyds, Surly, Summit, Mango Cart)",
+        "tags": []
+      },
+      {
+        "name": "Craft Cocktails",
+        "tags": []
+      },
+      {
+        "name": "Flaming Beaver",
+        "tags": []
+      },
+      {
+        "name": "Lemonade",
+        "tags": [
+          "●",
+          "■",
+          "▲"
+        ]
+      },
+      {
+        "name": "Mango El Jimador Tequila Spritz",
+        "tags": []
+      },
+      {
+        "name": "Mead (Blackberry, Cottage, Forest Fruit)",
+        "tags": [
+          "●"
+        ]
+      },
+      {
+        "name": "Menage A Trois Wine",
+        "tags": [
+          "●"
+        ]
+      },
+      {
+        "name": "Norse Crush Mocktail",
+        "tags": [
+          "●",
+          "■",
+          "▲"
+        ]
+      },
+      {
+        "name": "Nutrl Seltzers",
+        "tags": [
+          "●"
+        ]
+      },
+      {
+        "name": "Pixie Paloma Margarita",
+        "tags": []
+      },
+      {
+        "name": "Red Bull",
+        "tags": [
+          "●"
+        ]
+      },
+      {
+        "name": "Ritual G&T / Spritz Mocktails",
+        "tags": [
+          "●",
+          "■",
+          "▲"
+        ]
+      },
+      {
+        "name": "Royal Refresher Gin Fizz",
+        "tags": []
+      },
+      {
+        "name": "Seaglass Wines",
+        "tags": [
+          "●"
+        ]
+      },
+      {
+        "name": "Smoothies",
+        "tags": [
+          "●",
+          "■"
+        ]
+      },
+      {
+        "name": "Sutter Home White Zinfandel",
+        "tags": [
+          "●"
+        ]
+      },
+      {
+        "name": "Woodchuck Cider",
+        "tags": [
+          "●"
+        ]
+      }
     ],
     "userNotes": [],
     "userRating": null,
@@ -589,14 +1904,29 @@
     "categoryLabel": "Area 6 - Upson Downs",
     "icon": "🎭",
     "name": "Legends Stage",
-    "x": 1332,
-    "y": 757,
+    "x": 944,
+    "y": 1122,
     "items": [
-      { "name": "Puke & Snot - 10:30 am", "tags": [] },
-      { "name": "Puke & Snot - 12:00 pm", "tags": [] },
-      { "name": "Puke & Snot - 1:30 pm", "tags": [] },
-      { "name": "Puke & Snot - 3:30 pm", "tags": [] },
-      { "name": "Puke & Snot - 5:00 pm", "tags": [] }
+      {
+        "name": "Puke & Snot - 10:30 am",
+        "tags": []
+      },
+      {
+        "name": "Puke & Snot - 12:00 pm",
+        "tags": []
+      },
+      {
+        "name": "Puke & Snot - 1:30 pm",
+        "tags": []
+      },
+      {
+        "name": "Puke & Snot - 3:30 pm",
+        "tags": []
+      },
+      {
+        "name": "Puke & Snot - 5:00 pm",
+        "tags": []
+      }
     ],
     "userNotes": [],
     "userRating": null,
@@ -608,15 +1938,33 @@
     "categoryLabel": "Area 2 - Oven Hill Market",
     "icon": "🎭",
     "name": "Bakery Stage",
-    "x": 836,
-    "y": 832,
+    "x": 776,
+    "y": 876,
     "items": [
-      { "name": "The Danger Committee - Classic Blunders - 10:00 am", "tags": [] },
-      { "name": "The Danger Committee - Playing with Fire - 11:00 am", "tags": [] },
-      { "name": "The Danger Committee - Ninja: Silent but Deadly - 12:00 pm", "tags": [] },
-      { "name": "The Danger Committee - Playing with Fire - 2:30 pm", "tags": [] },
-      { "name": "The Danger Committee - Flaming Death - 4:30 pm", "tags": [] },
-      { "name": "The Danger Committee - Mostly Harmless / Slightly Lethal - 5:30 pm", "tags": [] }
+      {
+        "name": "The Danger Committee - Classic Blunders - 10:00 am",
+        "tags": []
+      },
+      {
+        "name": "The Danger Committee - Playing with Fire - 11:00 am",
+        "tags": []
+      },
+      {
+        "name": "The Danger Committee - Ninja: Silent but Deadly - 12:00 pm",
+        "tags": []
+      },
+      {
+        "name": "The Danger Committee - Playing with Fire - 2:30 pm",
+        "tags": []
+      },
+      {
+        "name": "The Danger Committee - Flaming Death - 4:30 pm",
+        "tags": []
+      },
+      {
+        "name": "The Danger Committee - Mostly Harmless / Slightly Lethal - 5:30 pm",
+        "tags": []
+      }
     ],
     "userNotes": [],
     "userRating": null,
@@ -628,14 +1976,29 @@
     "categoryLabel": "Area 1 - Shepherd's Green",
     "icon": "🏇",
     "name": "Joust Track & Arena",
-    "x": 1210,
-    "y": 871,
+    "x": 1189,
+    "y": 858,
     "items": [
-      { "name": "Joust Quintain Game Show - 11:00 am", "tags": [] },
-      { "name": "Joust - Full Armour - 1:00 pm", "tags": [] },
-      { "name": "Joust - Full Armour - 3:00 pm", "tags": [] },
-      { "name": "Joust Quintain Game Show - 5:00 pm", "tags": [] },
-      { "name": "Grand Parade - 12:30 pm", "tags": [] }
+      {
+        "name": "Joust Quintain Game Show - 11:00 am",
+        "tags": []
+      },
+      {
+        "name": "Joust - Full Armour - 1:00 pm",
+        "tags": []
+      },
+      {
+        "name": "Joust - Full Armour - 3:00 pm",
+        "tags": []
+      },
+      {
+        "name": "Joust Quintain Game Show - 5:00 pm",
+        "tags": []
+      },
+      {
+        "name": "Grand Parade - 12:30 pm",
+        "tags": []
+      }
     ],
     "userNotes": [],
     "userRating": null,
@@ -647,23 +2010,65 @@
     "categoryLabel": "Area 5 - Folkstone Well",
     "icon": "🎪",
     "name": "Folkstone Well / Cirque Du Celeste Stage",
-    "x": 1741,
-    "y": 730,
+    "x": 1557,
+    "y": 708,
     "items": [
-      { "name": "Shimmy & Spice - 10:00 am", "tags": [] },
-      { "name": "Fandazzi Fire Circus - 10:30 am", "tags": [] },
-      { "name": "Kazimir the Hungry Sword Swallower - 11:00 am", "tags": [] },
-      { "name": "Fandazzi Fire Circus - 11:30 am", "tags": [] },
-      { "name": "Dueling Masters - 12:00 pm", "tags": [] },
-      { "name": "Kazimir the Hungry - 12:30 pm", "tags": [] },
-      { "name": "The Littlest Dragon - 1:00 pm", "tags": [] },
-      { "name": "Kazimir the Hungry - 1:30 pm", "tags": [] },
-      { "name": "Fandazzi Fire Circus - 2:00 pm", "tags": [] },
-      { "name": "Dueling Masters - 2:30 pm", "tags": [] },
-      { "name": "Fandazzi Fire Circus - 3:00 pm", "tags": [] },
-      { "name": "Shimmy & Spice - 3:30 pm", "tags": [] },
-      { "name": "Kazimir the Hungry - 4:00 pm", "tags": [] },
-      { "name": "Fandazzi Fire Circus Uber Fire Show - 4:45 pm", "tags": [] }
+      {
+        "name": "Shimmy & Spice - 10:00 am",
+        "tags": []
+      },
+      {
+        "name": "Fandazzi Fire Circus - 10:30 am",
+        "tags": []
+      },
+      {
+        "name": "Kazimir the Hungry Sword Swallower - 11:00 am",
+        "tags": []
+      },
+      {
+        "name": "Fandazzi Fire Circus - 11:30 am",
+        "tags": []
+      },
+      {
+        "name": "Dueling Masters - 12:00 pm",
+        "tags": []
+      },
+      {
+        "name": "Kazimir the Hungry - 12:30 pm",
+        "tags": []
+      },
+      {
+        "name": "The Littlest Dragon - 1:00 pm",
+        "tags": []
+      },
+      {
+        "name": "Kazimir the Hungry - 1:30 pm",
+        "tags": []
+      },
+      {
+        "name": "Fandazzi Fire Circus - 2:00 pm",
+        "tags": []
+      },
+      {
+        "name": "Dueling Masters - 2:30 pm",
+        "tags": []
+      },
+      {
+        "name": "Fandazzi Fire Circus - 3:00 pm",
+        "tags": []
+      },
+      {
+        "name": "Shimmy & Spice - 3:30 pm",
+        "tags": []
+      },
+      {
+        "name": "Kazimir the Hungry - 4:00 pm",
+        "tags": []
+      },
+      {
+        "name": "Fandazzi Fire Circus Uber Fire Show - 4:45 pm",
+        "tags": []
+      }
     ],
     "userNotes": [],
     "userRating": null,
@@ -675,20 +2080,53 @@
     "categoryLabel": "Area 3 - Treetop Round",
     "icon": "🤹",
     "name": "Treetop Stage",
-    "x": 865,
-    "y": 498,
+    "x": 948,
+    "y": 416,
     "items": [
-      { "name": "Oops! The Danger Freak - 10:15 am", "tags": [] },
-      { "name": "Brother Paul Magician - 11:00 am", "tags": [] },
-      { "name": "Zilch the Torysteller - 11:30 am", "tags": [] },
-      { "name": "Oops! The Danger Freak - 12:30 pm", "tags": [] },
-      { "name": "Zilch the Torysteller - 1:15 pm", "tags": [] },
-      { "name": "Oops! The Danger Freak - 2:00 pm", "tags": [] },
-      { "name": "Brother Paul Magician - 2:45 pm", "tags": [] },
-      { "name": "Zilch the Torysteller - 3:15 pm", "tags": [] },
-      { "name": "Brother Paul Magician - 4:00 pm", "tags": [] },
-      { "name": "Oops! The Danger Freak - 4:30 pm", "tags": [] },
-      { "name": "Zilch the Torysteller - 5:15 pm", "tags": [] }
+      {
+        "name": "Oops! The Danger Freak - 10:15 am",
+        "tags": []
+      },
+      {
+        "name": "Brother Paul Magician - 11:00 am",
+        "tags": []
+      },
+      {
+        "name": "Zilch the Torysteller - 11:30 am",
+        "tags": []
+      },
+      {
+        "name": "Oops! The Danger Freak - 12:30 pm",
+        "tags": []
+      },
+      {
+        "name": "Zilch the Torysteller - 1:15 pm",
+        "tags": []
+      },
+      {
+        "name": "Oops! The Danger Freak - 2:00 pm",
+        "tags": []
+      },
+      {
+        "name": "Brother Paul Magician - 2:45 pm",
+        "tags": []
+      },
+      {
+        "name": "Zilch the Torysteller - 3:15 pm",
+        "tags": []
+      },
+      {
+        "name": "Brother Paul Magician - 4:00 pm",
+        "tags": []
+      },
+      {
+        "name": "Oops! The Danger Freak - 4:30 pm",
+        "tags": []
+      },
+      {
+        "name": "Zilch the Torysteller - 5:15 pm",
+        "tags": []
+      }
     ],
     "userNotes": [],
     "userRating": null,
@@ -700,19 +2138,49 @@
     "categoryLabel": "Area 7 - Narrow Market",
     "icon": "🎭",
     "name": "Crown Stage",
-    "x": 1450,
-    "y": 680,
+    "x": 1373,
+    "y": 394,
     "items": [
-      { "name": "The Littlest Dragon - 10:00 am", "tags": [] },
-      { "name": "The Tortuga Twins - 10:45 am", "tags": [] },
-      { "name": "Johnny Phoenix - 11:30 am", "tags": [] },
-      { "name": "The Tortuga Twins - 12:15 pm", "tags": [] },
-      { "name": "Johnny Phoenix - 1:00 pm", "tags": [] },
-      { "name": "The Tortuga Twins - 1:45 pm", "tags": [] },
-      { "name": "Johnny Phoenix - 2:30 pm", "tags": [] },
-      { "name": "The Tortuga Twins - 3:15 pm", "tags": [] },
-      { "name": "Johnny Phoenix - 4:00 pm", "tags": [] },
-      { "name": "The Tortuga Twins - 5:00 pm", "tags": [] }
+      {
+        "name": "The Littlest Dragon - 10:00 am",
+        "tags": []
+      },
+      {
+        "name": "The Tortuga Twins - 10:45 am",
+        "tags": []
+      },
+      {
+        "name": "Johnny Phoenix - 11:30 am",
+        "tags": []
+      },
+      {
+        "name": "The Tortuga Twins - 12:15 pm",
+        "tags": []
+      },
+      {
+        "name": "Johnny Phoenix - 1:00 pm",
+        "tags": []
+      },
+      {
+        "name": "The Tortuga Twins - 1:45 pm",
+        "tags": []
+      },
+      {
+        "name": "Johnny Phoenix - 2:30 pm",
+        "tags": []
+      },
+      {
+        "name": "The Tortuga Twins - 3:15 pm",
+        "tags": []
+      },
+      {
+        "name": "Johnny Phoenix - 4:00 pm",
+        "tags": []
+      },
+      {
+        "name": "The Tortuga Twins - 5:00 pm",
+        "tags": []
+      }
     ],
     "userNotes": [],
     "userRating": null,
@@ -724,19 +2192,49 @@
     "categoryLabel": "Area 6 - Upson Downs",
     "icon": "🐻",
     "name": "Bear Stage",
-    "x": 1370,
-    "y": 770,
+    "x": 1014,
+    "y": 525,
     "items": [
-      { "name": "Minnesota Traditional Morris - 9:45 am", "tags": [] },
-      { "name": "Royal Scottish Country Dancers - 10:15 am", "tags": [] },
-      { "name": "Earthquest Birds of Prey - 11:15 am", "tags": [] },
-      { "name": "Royal Scottish Country Dancers - 12:00 pm", "tags": [] },
-      { "name": "Grand Parade - 12:30 pm", "tags": [] },
-      { "name": "Earthquest Birds of Prey - 2:15 pm", "tags": [] },
-      { "name": "Royal Scottish Country Dancers - 3:15 pm", "tags": [] },
-      { "name": "Minnesota Traditional Morris - 4:00 pm", "tags": [] },
-      { "name": "Royal Scottish Country Dancers - 4:30 pm", "tags": [] },
-      { "name": "Earthquest Birds of Prey - 5:00 pm", "tags": [] }
+      {
+        "name": "Minnesota Traditional Morris - 9:45 am",
+        "tags": []
+      },
+      {
+        "name": "Royal Scottish Country Dancers - 10:15 am",
+        "tags": []
+      },
+      {
+        "name": "Earthquest Birds of Prey - 11:15 am",
+        "tags": []
+      },
+      {
+        "name": "Royal Scottish Country Dancers - 12:00 pm",
+        "tags": []
+      },
+      {
+        "name": "Grand Parade - 12:30 pm",
+        "tags": []
+      },
+      {
+        "name": "Earthquest Birds of Prey - 2:15 pm",
+        "tags": []
+      },
+      {
+        "name": "Royal Scottish Country Dancers - 3:15 pm",
+        "tags": []
+      },
+      {
+        "name": "Minnesota Traditional Morris - 4:00 pm",
+        "tags": []
+      },
+      {
+        "name": "Royal Scottish Country Dancers - 4:30 pm",
+        "tags": []
+      },
+      {
+        "name": "Earthquest Birds of Prey - 5:00 pm",
+        "tags": []
+      }
     ],
     "userNotes": [],
     "userRating": null,
@@ -748,17 +2246,41 @@
     "categoryLabel": "Area 4 - Marketplace",
     "icon": "🎭",
     "name": "Grove Stage",
-    "x": 1280,
-    "y": 710,
+    "x": 1150,
+    "y": 487,
     "items": [
-      { "name": "Ravenscroft Musicke Guide - 9:15 am", "tags": [] },
-      { "name": "Kipp the Conjurer - 10:00 am", "tags": [] },
-      { "name": "Tuey Wilson Comic Stunt Juggler - 11:30 am", "tags": [] },
-      { "name": "Tuey Wilson Comic Stunt Juggler - 12:30 pm", "tags": [] },
-      { "name": "Tuey Wilson Comic Stunt Juggler - 1:30 pm", "tags": [] },
-      { "name": "Tuey Wilson Comic Stunt Juggler - 3:00 pm", "tags": [] },
-      { "name": "Tuey Wilson Comic Stunt Juggler - 4:00 pm", "tags": [] },
-      { "name": "Kipp the Conjurer - 5:00 pm", "tags": [] }
+      {
+        "name": "Ravenscroft Musicke Guide - 9:15 am",
+        "tags": []
+      },
+      {
+        "name": "Kipp the Conjurer - 10:00 am",
+        "tags": []
+      },
+      {
+        "name": "Tuey Wilson Comic Stunt Juggler - 11:30 am",
+        "tags": []
+      },
+      {
+        "name": "Tuey Wilson Comic Stunt Juggler - 12:30 pm",
+        "tags": []
+      },
+      {
+        "name": "Tuey Wilson Comic Stunt Juggler - 1:30 pm",
+        "tags": []
+      },
+      {
+        "name": "Tuey Wilson Comic Stunt Juggler - 3:00 pm",
+        "tags": []
+      },
+      {
+        "name": "Tuey Wilson Comic Stunt Juggler - 4:00 pm",
+        "tags": []
+      },
+      {
+        "name": "Kipp the Conjurer - 5:00 pm",
+        "tags": []
+      }
     ],
     "userNotes": [],
     "userRating": null,
@@ -770,18 +2292,45 @@
     "categoryLabel": "Area 8 - Cartwheel Cove",
     "icon": "⚔️",
     "name": "Sherwood Stage",
-    "x": 620,
-    "y": 360,
+    "x": 770,
+    "y": 253,
     "items": [
-      { "name": "Baratok Belly Dance - 11:00 am", "tags": [] },
-      { "name": "Washing Well Wenches - 11:30 am", "tags": [] },
-      { "name": "Gabs The Fool - 12:30 pm", "tags": [] },
-      { "name": "Washing Well Wenches - 1:00 pm", "tags": [] },
-      { "name": "Gabs The Fool - 2:00 pm", "tags": [] },
-      { "name": "Washing Well Wenches - 2:30 pm", "tags": [] },
-      { "name": "Gabs The Fool - 3:30 pm", "tags": [] },
-      { "name": "Washing Well Wenches - 4:00 pm", "tags": [] },
-      { "name": "Baratok Belly Dance - 5:00 pm", "tags": [] }
+      {
+        "name": "Baratok Belly Dance - 11:00 am",
+        "tags": []
+      },
+      {
+        "name": "Washing Well Wenches - 11:30 am",
+        "tags": []
+      },
+      {
+        "name": "Gabs The Fool - 12:30 pm",
+        "tags": []
+      },
+      {
+        "name": "Washing Well Wenches - 1:00 pm",
+        "tags": []
+      },
+      {
+        "name": "Gabs The Fool - 2:00 pm",
+        "tags": []
+      },
+      {
+        "name": "Washing Well Wenches - 2:30 pm",
+        "tags": []
+      },
+      {
+        "name": "Gabs The Fool - 3:30 pm",
+        "tags": []
+      },
+      {
+        "name": "Washing Well Wenches - 4:00 pm",
+        "tags": []
+      },
+      {
+        "name": "Baratok Belly Dance - 5:00 pm",
+        "tags": []
+      }
     ],
     "userNotes": [],
     "userRating": null,
@@ -793,16 +2342,37 @@
     "categoryLabel": "Area 1 - Shepherd's Green",
     "icon": "🛡️",
     "name": "Viking Encampment",
-    "x": 1050,
-    "y": 990,
+    "x": 615,
+    "y": 915,
     "items": [
-      { "name": "Battle Sagas - 10:00 am", "tags": [] },
-      { "name": "Fight Show - 11:00 am", "tags": [] },
-      { "name": "Viking Ceremony - 1:00 pm", "tags": [] },
-      { "name": "Folktales and Lost Myths - 2:00 pm", "tags": [] },
-      { "name": "Fight Show - 3:00 pm", "tags": [] },
-      { "name": "Gods & Monsters - 4:00 pm", "tags": [] },
-      { "name": "Viking Games - 5:00 pm", "tags": [] }
+      {
+        "name": "Battle Sagas - 10:00 am",
+        "tags": []
+      },
+      {
+        "name": "Fight Show - 11:00 am",
+        "tags": []
+      },
+      {
+        "name": "Viking Ceremony - 1:00 pm",
+        "tags": []
+      },
+      {
+        "name": "Folktales and Lost Myths - 2:00 pm",
+        "tags": []
+      },
+      {
+        "name": "Fight Show - 3:00 pm",
+        "tags": []
+      },
+      {
+        "name": "Gods & Monsters - 4:00 pm",
+        "tags": []
+      },
+      {
+        "name": "Viking Games - 5:00 pm",
+        "tags": []
+      }
     ],
     "userNotes": [],
     "userRating": null,
@@ -815,11 +2385,17 @@
     "categoryLabel": "Area 4 - Marketplace",
     "icon": "⚔️",
     "name": "Badger Blades (#732)",
-    "x": 1250,
-    "y": 720,
+    "x": 1377,
+    "y": 609,
     "items": [
-      { "name": "Heavy-Duty Hand-Forged Battle Swords", "tags": [] },
-      { "name": "Custom Daggers & Axes with Lifetime Guarantee", "tags": [] }
+      {
+        "name": "Heavy-Duty Hand-Forged Battle Swords",
+        "tags": []
+      },
+      {
+        "name": "Custom Daggers & Axes with Lifetime Guarantee",
+        "tags": []
+      }
     ],
     "userNotes": [],
     "userRating": null,
@@ -832,11 +2408,17 @@
     "categoryLabel": "Area 4 - Marketplace",
     "icon": "🛡️",
     "name": "Arms & Armor (#146-148)",
-    "x": 1220,
-    "y": 740,
+    "x": 1509,
+    "y": 1078,
     "items": [
-      { "name": "Museum-Quality Replicas & Custom Rapier Swords", "tags": [] },
-      { "name": "Battle Shields & Steel Gauntlets", "tags": [] }
+      {
+        "name": "Museum-Quality Replicas & Custom Rapier Swords",
+        "tags": []
+      },
+      {
+        "name": "Battle Shields & Steel Gauntlets",
+        "tags": []
+      }
     ],
     "userNotes": [],
     "userRating": null,
@@ -849,10 +2431,13 @@
     "categoryLabel": "Area 5 - Folkstone Well",
     "icon": "👢",
     "name": "Son of Sandlar (#508)",
-    "x": 1680,
-    "y": 740,
+    "x": 1669,
+    "y": 548,
     "items": [
-      { "name": "Handmade Custom Leather Boots & Footwear", "tags": [] }
+      {
+        "name": "Handmade Custom Leather Boots & Footwear",
+        "tags": []
+      }
     ],
     "userNotes": [],
     "userRating": null,
